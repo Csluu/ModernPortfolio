@@ -1,9 +1,6 @@
 {
   "dependencies": {
-    "framer-motion": "^9.0.2",
+    "framer-motion": "^9.0.4",
     "react-anchor-link-smooth-scroll": "^1.0.12"
-  },
-  "devDependencies": {
-    "tailwindcss": "^3.2.6"
   }
 }
