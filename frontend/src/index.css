@@ -12,4 +12,5 @@ body,
   height: 100%;
   background-color: #fbf9f3;
   @apply text-white;
+  font-family: "Quicksand", sans-serif;
 }

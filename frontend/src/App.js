@@ -12,7 +12,7 @@ function App() {
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
   return (
-    <div className="App">
+    <div className="App ">
       <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
       <AboutMe />
       <Projects />

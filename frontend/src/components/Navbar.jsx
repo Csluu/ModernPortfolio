@@ -40,7 +40,7 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
   return (
-    <nav className="flex fixed top-0 items-center justify-center w-full font-quicksand backdrop-blur-xl bg-black bg-opacity-0 border-b border-slate-50/[0.06] z-30">
+    <nav className="flex fixed top-0 items-center justify-center w-full font-quicksand bg-[#fbf9f3] border-b border-slate-50/[0.06] z-30">
       {/* Desktop Navbar */}
       {isDesktop ? (
         <div className="flex items-center justify-between basis-10/12 max-w-[1320px] mx-[40px] my-[24px]">
@@ -67,12 +67,9 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
               setSelectedPage={setSelectedPage}
             />
           </div>
-          <Link
-            className="flex rounded-full text-black bg-slate-700 p-1 "
-            page="Resume"
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-          ></Link>
+          <div className="flex rounded-full text-orange-500 font-semibold">
+            Resume
+          </div>
         </div>
       ) : (
         // Mobile Navbar
