@@ -30,10 +30,10 @@ function Skills() {
           >
             <motion.div
               onClick={() => setOpen(!isOpen)}
-              className="flex flex-col fixed top-1/3 left-[37.5%] p-10 h-96 w-[640px] bg-white rounded-2xl justify-start shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[5%] hover:shadow-glow hover:shadow-orange-200 hover:scale-[101%] hover:ease-in-out transition duration-150"
+              className="flex flex-col fixed top-1/3 left-[37.5%] p-10 h-96 w-[640px] bg-black rounded-2xl justify-start shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[15%] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150"
             >
-              <h1 className="text-black text-[70px]">{title}</h1>
-              <p className="text-black">{content}</p>
+              <h1 className="text-[#fbf9f3] text-[70px]">{title}</h1>
+              <p className="text-[#676767]">{content}</p>
             </motion.div>
           </div>
         )}
@@ -46,8 +46,8 @@ function Skills() {
       id="Skills"
       className="flex flex-col basis-11/12 max-w-[1400px] mx-auto"
     >
-      <header className="flex relative top-12 text-[140px] justify-center h-60 text-[#edece8] font-semibold ">
-        <h1 className="flex ">Skills</h1>
+      <header className="flex relative top-12 text-[140px] justify-center h-60 text-orange-500 font-semibold">
+        <h1 style={{ textShadow: "2px 4px  rgb(0 0 0 / 0.2)" }}>Skills</h1>
       </header>
       <motion.ul className="grid sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 w-full h-fit gap-5">
         <motion.li
@@ -58,7 +58,7 @@ function Skills() {
             } else {
             }
           }}
-          className="bg-white sm:col-span-2 md:col-span-3 lg:col-span-1 rounded-2xl shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[5%] h-80 hover:shadow-glow hover:shadow-orange-200 hover:scale-[101%] hover:ease-in-out transition duration-150"
+          className="bg-[#1b1c1e] sm:col-span-2 md:col-span-3 lg:col-span-1 rounded-2xl shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[15%] h-80 hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150"
         >
           <img
             alt="python"
@@ -75,7 +75,7 @@ function Skills() {
             } else {
             }
           }}
-          className="bg-white sm:col-span-2 md:col-span-3 lg:col-span-1 rounded-2xl shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[5%] h-80 hover:shadow-glow hover:shadow-orange-200 hover:scale-[101%] hover:ease-in-out transition duration-150"
+          className="bg-[#1b1c1e] sm:col-span-2 md:col-span-3 lg:col-span-1 rounded-2xl shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[15%] h-80 hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150"
         >
           <img
             alt="django"
@@ -91,7 +91,7 @@ function Skills() {
             } else {
             }
           }}
-          className="bg-white sm:col-span-2 md:col-span-3 lg:col-span-1 rounded-2xl shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[5%] h-80 hover:shadow-glow hover:shadow-orange-200 hover:scale-[101%] hover:ease-in-out transition duration-150"
+          className="bg-[#1b1c1e] sm:col-span-2 md:col-span-3 lg:col-span-1 rounded-2xl shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[15%] h-80 hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150"
         >
           <img alt="css" src="./assets/css-3.png" className="scale-[33%]"></img>
         </motion.li>
@@ -103,7 +103,7 @@ function Skills() {
             } else {
             }
           }}
-          className="bg-white sm:col-span-2 md:col-span-3 lg:col-span-1 rounded-2xl shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[5%] h-80 hover:shadow-glow hover:shadow-orange-200 hover:scale-[101%] hover:ease-in-out transition duration-150"
+          className="bg-[#1b1c1e] sm:col-span-2 md:col-span-3 lg:col-span-1 rounded-2xl shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[15%] h-80 hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150"
         >
           <img
             alt="html"
@@ -119,7 +119,7 @@ function Skills() {
             } else {
             }
           }}
-          className="bg-white sm:col-span-2 md:col-span-3 lg:col-span-1 rounded-2xl shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[5%] h-80 hover:shadow-glow hover:shadow-orange-200 hover:scale-[101%] hover:ease-in-out transition duration-150"
+          className="bg-[#1b1c1e] sm:col-span-2 md:col-span-3 lg:col-span-1 rounded-2xl shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[15%] h-80 hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150"
         >
           <img
             alt="Javascript"
@@ -135,7 +135,7 @@ function Skills() {
             } else {
             }
           }}
-          className="bg-white sm:col-span-2 md:col-span-3 lg:col-span-1 rounded-2xl shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[5%] h-80 hover:shadow-glow hover:shadow-orange-200 hover:scale-[101%] hover:ease-in-out transition duration-150 flex justify-center"
+          className="bg-[#1b1c1e] sm:col-span-2 md:col-span-3 lg:col-span-1 rounded-2xl shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[15%] h-80 hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex justify-center"
         >
           <img
             alt="Tailwind"
@@ -152,7 +152,7 @@ function Skills() {
             } else {
             }
           }}
-          className="bg-white sm:col-span-2 md:col-span-3 lg:col-span-1 rounded-2xl shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[5%] h-80 hover:shadow-glow hover:shadow-orange-200 hover:scale-[101%] hover:ease-in-out transition duration-150 flex justify-center"
+          className="bg-[#1b1c1e] sm:col-span-2 md:col-span-3 lg:col-span-1 rounded-2xl shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[15%] h-80 hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex justify-center"
         >
           <img
             alt="Tailwind"
@@ -168,7 +168,7 @@ function Skills() {
             } else {
             }
           }}
-          className="bg-white sm:col-span-2 md:col-span-3 lg:col-span-1 rounded-2xl shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[5%] h-80 hover:shadow-glow hover:shadow-orange-200 hover:scale-[101%] hover:ease-in-out transition duration-150"
+          className="bg-[#1b1c1e] sm:col-span-2 md:col-span-3 lg:col-span-1 rounded-2xl shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[15%] h-80 hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150"
         >
           <img
             alt="PostgresSQL"
@@ -184,7 +184,7 @@ function Skills() {
             } else {
             }
           }}
-          className="bg-white sm:col-span-2 md:col-span-3 lg:col-span-1 rounded-2xl shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[5%] h-80 hover:shadow-glow hover:shadow-orange-200 hover:scale-[101%] hover:ease-in-out transition duration-150"
+          className="bg-[#1b1c1e] sm:col-span-2 md:col-span-3 lg:col-span-1 rounded-2xl shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[15%] h-80 hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150"
         >
           <img
             alt="React"
@@ -200,7 +200,7 @@ function Skills() {
             } else {
             }
           }}
-          className="bg-white sm:col-span-2 md:col-span-3 lg:col-span-1 rounded-2xl shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[5%] h-80 hover:shadow-glow hover:shadow-orange-200 hover:scale-[101%] hover:ease-in-out transition duration-150"
+          className="bg-[#1b1c1e] sm:col-span-2 md:col-span-3 lg:col-span-1 rounded-2xl shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[15%] h-80 hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150"
         >
           <img
             alt="Git"
@@ -216,7 +216,7 @@ function Skills() {
             } else {
             }
           }}
-          className="bg-white sm:col-span-2 md:col-span-3 lg:col-span-1 rounded-2xl shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[5%] h-80 hover:shadow-glow hover:shadow-orange-200 hover:scale-[101%] hover:ease-in-out transition duration-150"
+          className="bg-[#1b1c1e] sm:col-span-2 md:col-span-3 lg:col-span-1 rounded-2xl shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[15%] h-80 hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150"
         >
           <img alt="API" src="./assets/api.png" className="scale-[33%]"></img>
         </motion.li>
@@ -228,7 +228,7 @@ function Skills() {
             } else {
             }
           }}
-          className="bg-white sm:col-span-2 md:col-span-3 lg:col-span-1 rounded-2xl shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[5%] h-80 hover:shadow-glow hover:shadow-orange-200 hover:scale-[101%] hover:ease-in-out transition duration-150"
+          className="bg-[#1b1c1e] sm:col-span-2 md:col-span-3 lg:col-span-1 rounded-2xl shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[15%] h-80 hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150"
         >
           <img
             alt="Scrum"

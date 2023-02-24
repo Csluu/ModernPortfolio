@@ -9,8 +9,9 @@ html,
 body,
 #root,
 .app {
-  height: 100%;
-  background-color: #fbf9f3;
   @apply text-white;
   font-family: "Quicksand", sans-serif;
+}
+.linux {
+  filter: saturate(50%);
 }

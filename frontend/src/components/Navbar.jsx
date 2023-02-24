@@ -13,12 +13,13 @@ const Link = ({
   return (
     <AnchorLink
       className={`${
-        selectedPage === page ? "text-orange-500" : "text-[#676767]"
+        selectedPage === page ? "text-orange-500" : "text-[#1b1c1e]"
       } ${
         !isDesktop && isMenuToggled
           ? "w-full hover:bg-slate-600 hover:bg-opacity-30 rounded-[4px]"
           : ""
-      } hover:text-black transition duration-150 hover:ease-in-out font-semibold`}
+      } hover:text-black transition duration-150 hover:ease-in-out font-semibold text-lg`}
+      style={{ textShadow: "1px 2px  rgb(0 0 0 /0.2)" }}
       href={`#${page}`}
       onClick={() => setSelectedPage(page)}
     >
@@ -40,11 +41,19 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
   return (
-    <nav className="flex fixed top-0 items-center justify-center w-full font-quicksand bg-[#fbf9f3] border-b border-slate-50/[0.06] z-30">
+    <nav className="flex fixed top-0 items-center justify-center w-full font-quicksand z-30">
+      <div className="absolute inset-0 z-[-1]">
+        <div className="w-full h-full bg-linux filter saturate-50"></div>
+      </div>
       {/* Desktop Navbar */}
       {isDesktop ? (
         <div className="flex items-center justify-between basis-10/12 max-w-[1320px] mx-[40px] my-[24px]">
-          <div className="text-[#676767] font-semibold">Christopher</div>
+          <div
+            className="text-[#1b1c1e] font-semibold text-lg w-[84px] justify-center place-items-center flex-"
+            style={{ textShadow: "1px 2px  rgb(0 0 0 /0.2)" }}
+          >
+            <h1 className="w-36">Christopher Luu</h1>
+          </div>
           <div className="flex items-center justify-center gap-4">
             <Link
               page="About"
@@ -67,7 +76,10 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
               setSelectedPage={setSelectedPage}
             />
           </div>
-          <div className="flex rounded-full text-orange-500 font-semibold">
+          <div
+            className="flex rounded-xl text-[#1b1c1e] font-semibold bg-orange-500 py-1 px-2 hover:scale-105 text-lg w-[84px]"
+            style={{ textShadow: "1px 2px  rgb(0 0 0 /0.2)" }}
+          >
             Resume
           </div>
         </div>
