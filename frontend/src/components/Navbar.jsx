@@ -49,7 +49,7 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
       {isDesktop ? (
         <div className="flex items-center justify-between basis-10/12 max-w-[1320px] mx-[40px] my-[24px]">
           <div
-            className="text-[#1b1c1e] font-semibold text-lg w-[84px] justify-center place-items-center flex-"
+            className="text-[#1b1c1e] font-semibold text-lg w-[84px] justify-center place-items-center "
             style={{ textShadow: "1px 2px  rgb(0 0 0 /0.2)" }}
           >
             <h1 className="w-36">Christopher Luu</h1>
@@ -76,10 +76,7 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
               setSelectedPage={setSelectedPage}
             />
           </div>
-          <div
-            className="flex rounded-xl text-[#1b1c1e] font-semibold bg-orange-500 py-1 px-2 hover:scale-105 text-lg w-[84px]"
-            style={{ textShadow: "1px 2px  rgb(0 0 0 /0.2)" }}
-          >
+          <div className="flex rounded-lg text-[#1b1c1e] font-semibold bg-orange-500 py-1 px-2 hover:scale-105 text-lg w-[84px] shadow-highLight-text border-[1px] border-white border-opacity-[15%]">
             Resume
           </div>
         </div>

@@ -1,4 +1,6 @@
 import React from "react";
+import { useForm } from "react-hook-form";
+import { motion } from "framer-motion";
 
 function Contact() {
   return (
@@ -11,40 +13,33 @@ function Contact() {
       </header>
       <ul className="grid sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-6 rows-2 w-full h-fit gap-5">
         <li className="bg-[#1b1c1e] sm:col-span-2 md:col-span-3 lg:col-span-3 lg:row-span-1 rounded-2xl shadow-highLight border-[1px] border-white border-opacity-[15%] h-[450px]">
-          <div className="bg-cover bg-hero-pattern w-full h-full bg-center bg-origin-padding rounded-2xl "></div>
+          <h1 className="text-[#FFF5EE]">Get in Touch</h1>
         </li>
-        <li className="bg-[#1b1c1e] sm:col-span-2 md:col-span-3 lg:col-span-3 lg:row-span-1 rounded-2xl shadow-highLight border-[1px] border-white border-opacity-[15%] h-[450px]">
-          <div className="bg-cover bg-hero-pattern w-full h-full bg-center bg-origin-padding rounded-2xl "></div>
-        </li>
+        <li className="bg-[#1b1c1e] sm:col-span-2 md:col-span-3 lg:col-span-3 lg:row-span-1 rounded-2xl shadow-highLight border-[1px] border-white border-opacity-[15%] h-[450px]"></li>
         <li className="bg-[#1b1c1e] sm:col-span-2 md:col-span-2 rounded-2xl shadow-highLight border-[1px] border-white border-opacity-[15%] h-96 flex flex-col justify-end p-10">
-          <h1 className="text-[#1b1c1e] h-fit text-[35px] m-2">About Me</h1>
-          <p className="h-fit text-[18px] m-2 text-[#676767]">
-            I am a full stack developer with expertise in React and Django. I am
-            committed to delivering high-quality web solutions that meet
-            business objectives and user needs
+          <h1 className="h-fit text-[35px] text-[#FFF5EE] m-2">
+            Front-end Development
+          </h1>
+          <p className="h-fit text-[25px] m-2 text-[#676767]">
+            Experienced designer & visual developer. I love using tools like
+            React and Tailwind.
           </p>
         </li>
         <li className="bg-[#1b1c1e] sm:col-span-2 md:col-span-2 rounded-2xl shadow-highLight border-[1px] border-white border-opacity-[15%] h-96 flex flex-col justify-end p-10">
-          <h1 className="text-[#1b1c1e] h-fit text-[35px] m-2">About Me</h1>
-          <p className="h-fit text-[18px] m-2 text-[#676767]">
-            I am a full stack developer with expertise in React and Django. I am
-            committed to delivering high-quality web solutions that meet
-            business objectives and user needs
+          <h1 className="text-[#FFF5EE] h-fit text-[35px] m-2">
+            Back-end Development
+          </h1>
+          <p className="h-fit text-[25px] m-2 text-[#676767]">
+            Experienced designer & developer. I love using tools like Django and
+            SQL.
           </p>
         </li>
-        <li className=" sm:col-span-2 md:col-span-2 rounded-2xl shadow-highLight border-[1px] border-white border-opacity-[15%] md:h-96 sm:h-auto bg-[#5285ce] hover:shadow-glow hover:shadow-orange-200 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center">
-          <a
-            href="https://www.linkedin.com/in/csluu/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="h-full flex items-center justify-center "
-          >
-            <img
-              src="./assets/linkedin.png"
-              alt="LinkedIn Profile"
-              className="scale-[25%]"
-            />
-          </a>
+        <li className="bg-[#1b1c1e] sm:col-span-2 md:col-span-2 rounded-2xl shadow-highLight border-[1px] border-white border-opacity-[15%] h-96 flex flex-col justify-end p-10">
+          <h1 className="text-[#FFF5EE] h-fit text-[35px] m-2">Data Science</h1>
+          <p className="h-fit text-[25px] m-2 text-[#676767]">
+            Experienced designer & visual developer. I love using tools like
+            React and Tailwind.
+          </p>
         </li>
       </ul>
     </section>
