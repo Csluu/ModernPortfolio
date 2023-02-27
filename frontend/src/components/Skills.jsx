@@ -35,7 +35,7 @@ function Skills() {
               <h1 className="text-[#FFF5EE] font-semibold text-[50px]">
                 {title}
               </h1>
-              <p className="text-[#A38571] text-[20px]">{content}</p>
+              <p className="text-[#70798C] text-opacity-75 text-[20px]">{content}</p>
             </motion.div>
           </div>
         )}
@@ -60,7 +60,7 @@ function Skills() {
             } else {
             }
           }}
-          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#A38571] hover:text-orange-500 border-white border-opacity-[15%] md:h-80 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] md:h-80 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
         >
           <div className="flex flex-col items-center justify-center w-full h-full">
             <img
@@ -81,7 +81,7 @@ function Skills() {
             }
           }}
           d
-          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#A38571] hover:text-orange-500 border-white border-opacity-[15%] md:h-80 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] md:h-80 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
         >
           <div className="flex flex-col items-center justify-center w-full h-full">
             <img
@@ -101,11 +101,11 @@ function Skills() {
             }
           }}
           d
-          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#A38571] hover:text-orange-500 border-white border-opacity-[15%] md:h-80 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] md:h-80 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
         >
           <div className="flex flex-col items-center justify-center w-full h-full">
             <img
-              src="./assets/css-3.png"
+              src="./assets/css.png"
               alt="LinkedIn Profile"
               className="scale-[33%]"
             />
@@ -121,11 +121,11 @@ function Skills() {
             }
           }}
           d
-          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#A38571] hover:text-orange-500 border-white border-opacity-[15%] md:h-80 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] md:h-80 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
         >
           <div className="flex flex-col items-center justify-center w-full h-full">
             <img
-              src="./assets/html-5.png"
+              src="./assets/html.png"
               alt="LinkedIn Profile"
               className="scale-[33%]"
             />
@@ -141,11 +141,11 @@ function Skills() {
             }
           }}
           d
-          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#A38571] hover:text-orange-500 border-white border-opacity-[15%] md:h-80 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] md:h-80 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
         >
           <div className="flex flex-col items-center justify-center w-full h-full">
             <img
-              src="./assets/js.png"
+              src="./assets/javascript.png"
               alt="LinkedIn Profile"
               className="scale-[33%]"
             />
@@ -161,7 +161,7 @@ function Skills() {
             }
           }}
           d
-          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#A38571] hover:text-orange-500 border-white border-opacity-[15%] md:h-80 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] md:h-80 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
         >
           <div className="flex flex-col items-center justify-center w-full h-full">
             <img
@@ -182,7 +182,7 @@ function Skills() {
             }
           }}
           d
-          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#A38571] hover:text-orange-500 border-white border-opacity-[15%] md:h-80 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] md:h-80 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
         >
           <div className="flex flex-col items-center justify-center w-full h-full">
             <img
@@ -202,7 +202,7 @@ function Skills() {
             }
           }}
           d
-          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#A38571] hover:text-orange-500 border-white border-opacity-[15%] md:h-80 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] md:h-80 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
         >
           <div className="flex flex-col items-center justify-center w-full h-full">
             <img
@@ -222,11 +222,11 @@ function Skills() {
             }
           }}
           d
-          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#A38571] hover:text-orange-500 border-white border-opacity-[15%] md:h-80 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] md:h-80 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
         >
           <div className="flex flex-col items-center justify-center w-full h-full">
             <img
-              src="./assets/logo512.png"
+              src="./assets/react.png"
               alt="LinkedIn Profile"
               className="scale-[33%]"
             />
@@ -242,11 +242,11 @@ function Skills() {
             }
           }}
           d
-          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#A38571] hover:text-orange-500 border-white border-opacity-[15%] md:h-80 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] md:h-80 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
         >
           <div className="flex flex-col items-center justify-center w-full h-full">
             <img
-              src="./assets/Git-Icon-1788C.png"
+              src="./assets/Git.png"
               alt="LinkedIn Profile"
               className="scale-[33%]"
             />
@@ -262,7 +262,7 @@ function Skills() {
             }
           }}
           d
-          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#A38571] hover:text-orange-500 border-white border-opacity-[15%] md:h-80 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] md:h-80 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
         >
           <div className="flex flex-col items-center justify-center w-full h-full">
             <img
@@ -282,7 +282,7 @@ function Skills() {
             }
           }}
           d
-          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#A38571] hover:text-orange-500 border-white border-opacity-[15%] md:h-80 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] md:h-80 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
         >
           <div className="flex flex-col items-center justify-center w-full h-full">
             <img

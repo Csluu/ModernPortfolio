@@ -90,7 +90,11 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
                 className="opacity-50 p-2 hover:opacity-60 hover:scale-105 hover:ease-in-out transition duration-150"
                 onClick={() => setIsMenuToggled(true)}
               >
-                <img alt="menu-icon" src="../assets/menu-icon.svg" />
+                <img
+                  alt="menu-icon"
+                  src="../assets/menu.png"
+                  className="scale-[100%] h-6"
+                />
               </button>
             </div>
           ) : (
@@ -102,8 +106,8 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
               >
                 <img
                   alt="close-icon"
-                  src="../assets/close-icon.svg"
-                  className="hover:scale-105 hover:opacity-100 opacity-80 hover:ease-in-out transition duration-150"
+                  src="../assets/cancel.png"
+                  className="hover:scale-105 hover:opacity-100 opacity-80 hover:ease-in-out transition duration-150 h-10"
                 ></img>
               </button>
             </div>

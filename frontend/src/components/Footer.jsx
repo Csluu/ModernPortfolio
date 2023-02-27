@@ -31,7 +31,30 @@ const Footer = ({ selectedPage }) => {
           <Link page="Contact" />
         </ul>
       </div>
-      <div>Icon Icon Icon</div>
+      <div className="flex flex-row gap-2">
+        <a
+          href="https://www.linkedin.com/in/csluu/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="./assets/linkedin32.png"
+            alt="LinkedIn Profile"
+            className="opacity-40 w-fit h-fit hover:scale-105 hover:opacity-60"
+          />
+        </a>
+        <a
+          href="https://github.com/Csluu"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="./assets/github32.png"
+            alt="github profile"
+            className="opacity-100 w-fit h-fit hover:scale-105"
+          />
+        </a>
+      </div>
     </nav>
   );
 };
