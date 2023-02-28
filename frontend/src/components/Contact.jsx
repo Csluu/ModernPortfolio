@@ -19,9 +19,9 @@ const Contact = () => {
   return (
     <section
       id="Contact"
-      className="flex flex-col basis-11/12 max-w-[1400px] mx-auto"
+      className="flex flex-col basis-11/12 max-w-[1400px] mx-auto gap-2"
     >
-      <header className="flex relative top-12 text-[140px] justify-center h-60 text-orange-500 font-semibold">
+      <header className="flex relative text-[180px] justify-center h-60 text-orange-500 font-semibold">
         <h1 style={{ textShadow: "2px 4px  rgb(0 0 0 / 0.2)" }}>Contact</h1>
       </header>
       <ul className="grid sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-6 rows-2 w-full h-fit gap-5">
