@@ -14,7 +14,7 @@ function Skills() {
   const [isGitOpen, setGitOpen] = useState(false);
   const [isApiOpen, setApiOpen] = useState(false);
   const [isScrumOpen, setScrumOpen] = useState(false);
-  function ExpandableContent({ isOpen, setOpen, title, content }) {
+  function ExpandableContent({ isOpen, setOpen, title, content, image }) {
     return (
       <>
         {isOpen && (
@@ -30,11 +30,14 @@ function Skills() {
           >
             <motion.div
               onClick={() => setOpen(!isOpen)}
-              className="flex flex-col fixed top-1/3 left-[37.5%] p-10 h-96 w-[640px] bg-[#1b1c1e] rounded-2xl justify-start shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[15%] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 gap-2"
+              className="flex flex-col fixed top-1/3 left-[37.5%] p-10 h-96 w-[640px] bg-[#1b1c1e] rounded-xl justify-start shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[15%] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 gap-3"
             >
-              <h1 className="text-[#FFF5EE] font-semibold text-[50px]">
-                {title}
-              </h1>
+              <header className="flex justify-between place-items-center gap-5">
+                <h1 className="text-[#FFF5EE] font-semibold text-[50px]">
+                  {title}
+                </h1>
+                <img src={image} alt={title} className="scale-[75%] h-16" />
+              </header>
               <p className="text-[#70798C] text-opacity-75 text-[20px]">
                 {content}
               </p>
@@ -300,66 +303,77 @@ function Skills() {
           setOpen={setPythonOpen}
           title="Python"
           content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
+          image="./assets/python.png"
         />
         <ExpandableContent
           isOpen={isDjangoOpen}
           setOpen={setDjangoOpen}
           title="Django"
           content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
+          image="./assets/django.png"
         />
         <ExpandableContent
           isOpen={isCssOpen}
           setOpen={setCssOpen}
           title="CSS"
           content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
+          image="./assets/css.png"
         />
         <ExpandableContent
           isOpen={isHtmlOpen}
           setOpen={setHtmlOpen}
           title="HTML"
           content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
+          image="./assets/html.png"
         />
         <ExpandableContent
           isOpen={isJavaScriptOpen}
           setOpen={setJavaScriptOpen}
           title="Javascript"
           content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
+          image="./assets/javascript.png"
         />
         <ExpandableContent
           isOpen={isTailwindOpen}
           setOpen={setTailwindOpen}
           title="Tailwind"
           content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
+          image="./assets/tailwind.png"
         />
         <ExpandableContent
           isOpen={isSqlOpen}
           setOpen={setSqlOpen}
           title="Postgres"
           content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
+          image="./assets/PostgreSQL_logo.png"
         />
         <ExpandableContent
           isOpen={isReactOpen}
           setOpen={setReactOpen}
           title="React"
           content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
+          image="./assets/react.png"
         />
         <ExpandableContent
           isOpen={isGitOpen}
           setOpen={setGitOpen}
           title="Git"
           content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
+          image="./assets/Git.png"
         />
         <ExpandableContent
           isOpen={isApiOpen}
           setOpen={setApiOpen}
           title="Api"
           content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
+          image="./assets/api.png"
         />
         <ExpandableContent
           isOpen={isScrumOpen}
           setOpen={setScrumOpen}
           title="Scrum"
           content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
+          image="./assets/scrum.png"
         />
       </motion.ul>
     </section>

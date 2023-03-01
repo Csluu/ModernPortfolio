@@ -124,7 +124,7 @@ const Contact = () => {
           </p>
         </li>
         <li className="bg-[#1b1c1e] sm:col-span-2 md:col-span-2 rounded-2xl shadow-highLight border-[1px] border-white border-opacity-[15%] h-96 flex flex-col justify-center p-10">
-          <h1 className="text-[#FFF5EE] h-fit text-[35px] m-2">Data Science</h1>
+          <h1 className="text-[#FFF5EE] h-fit text-[35px] m-2">Blockchain</h1>
           <p className="h-fit text-[25px] m-2 text-[#70798C] text-opacity-75">
             Experienced designer & visual developer. I love using tools like
             React and Tailwind.

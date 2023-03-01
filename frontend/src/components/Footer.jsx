@@ -51,7 +51,7 @@ const Footer = ({ selectedPage }) => {
           <img
             src="./assets/github32.png"
             alt="github profile"
-            className="opacity-100 w-fit h-fit hover:scale-105"
+            className="opacity-40 w-fit h-fit hover:scale-105 hover:opacity-60"
           />
         </a>
       </div>
