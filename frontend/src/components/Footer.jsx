@@ -2,6 +2,7 @@ import React from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Link = ({
   page,
@@ -23,7 +24,7 @@ const Link = ({
 const Footer = ({ selectedPage }) => {
   return (
     <nav className="flex flex-col items-center justify-center w-full font-quicksand p-5">
-      <div className="flex items-center justify-center basis-10/12 max-w-[1320px] mx-[40px] my-[20px]">
+      <div className="flex items-center justify-center basis-10/12 max-w-[1320px] mx-[40px] my-[20px] h-fit">
         <ul className="flex gap-4">
           <Link page="About" />
           <Link page="Projects" />

@@ -14,6 +14,7 @@ function Skills() {
   const [isGitOpen, setGitOpen] = useState(false);
   const [isApiOpen, setApiOpen] = useState(false);
   const [isScrumOpen, setScrumOpen] = useState(false);
+
   function ExpandableContent({ isOpen, setOpen, title, content, image }) {
     return (
       <>
@@ -29,8 +30,16 @@ function Skills() {
             className="fixed top-0 left-0 w-full h-full backdrop-blur-sm z-40"
           >
             <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, scale: 0.9 },
+                visible: { opacity: 1, scale: 1.0 },
+              }}
               onClick={() => setOpen(!isOpen)}
-              className="flex flex-col fixed top-1/3 left-[37.5%] p-10 h-96 w-[640px] bg-[#1b1c1e] rounded-xl justify-start shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[15%] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 gap-3"
+              className="flex flex-col fixed xs:top-20 ss:top-1/3 ss:left-[8.5%] sm:left-[20%] md:left-1/4 lg:left-1/3 xl:left-[37.5%] p-10 xs:mx-2 ss:h-96 xs:w-fit ss:mx-5 ss:w-[640px] bg-[#1b1c1e] rounded-xl justify-start shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[15%] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 gap-3"
             >
               <header className="flex justify-between place-items-center gap-5">
                 <h1 className="text-[#FFF5EE] font-semibold text-[50px]">
@@ -47,336 +56,355 @@ function Skills() {
       </>
     );
   }
+  const container = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.25,
+      },
+    },
+  };
+
+  const child = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+    viewport: { once: true, amount: 0.5 },
+  };
 
   return (
-    <section
-      id="Skills"
-      className="flex flex-col basis-11/12 max-w-[1400px] mx-auto h-screen gap-12"
+    <motion.section
+      className="flex w-full justify-center h-fit"
+      variants={container}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
     >
-      <header className="flex relative top-12 text-[180px] justify-center h-60 text-orange-500 font-semibold">
-        <h1 style={{ textShadow: "2px 4px  rgb(0 0 0 / 0.2)" }}>Skills</h1>
-      </header>
-      <motion.ul className="grid sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 w-full h-fit gap-5">
-        <motion.li
-          onClick={() => {
-            setPythonOpen(!isPythonOpen);
-            if (!isPythonOpen) {
-              document.body.style.overflow = "hidden";
-            } else {
-            }
-          }}
-          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] md:h-72 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
-        >
-          <div className="flex flex-col items-center justify-center w-full h-full">
-            <img
-              src="./assets/python.png"
-              alt="LinkedIn Profile"
-              className="scale-[33%]"
-            />
-            <div className="h-0 -translate-y-20 font-semibold">Python</div>
-          </div>
-        </motion.li>
+      <div
+        id="Skills"
+        className="flex flex-col basis-11/12 max-w-[1400px] sm:mx-5 lg:mx-5 xl-mx-auto h-fit gap-12"
+      >
+        <header className="flex relative top-10 ss:text-[150px] xs:text-[60px] xs:place-items-end xs:h-32 sm:text-[180px] justify-center ss:h-60 text-orange-500 font-semibold">
+          <h1 style={{ textShadow: "2px 4px  rgb(0 0 0 / 0.2)" }}>Skills</h1>
+        </header>
+        <ul className="grid sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 w-full h-fit gap-5">
+          <motion.li
+            variants={child}
+            onClick={() => {
+              setPythonOpen(!isPythonOpen);
+              if (!isPythonOpen) {
+                document.body.style.overflow = "hidden";
+              } else {
+              }
+            }}
+            className="col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] h-72 bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+          >
+            <div className="flex flex-col items-center justify-center h-full">
+              <img src="./assets/python.png" alt="python" className="w-32" />
+              <div className="translate-y-5 font-semibold">Python</div>
+            </div>
+          </motion.li>
 
-        <motion.li
-          onClick={() => {
-            setDjangoOpen(!isDjangoOpen);
-            if (!isDjangoOpen) {
-              document.body.style.overflow = "hidden";
-            } else {
-            }
-          }}
-          d
-          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] md:h-72 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
-        >
-          <div className="flex flex-col items-center justify-center w-full h-full">
-            <img
-              src="./assets/django.png"
-              alt="LinkedIn Profile"
-              className="scale-[33%]"
-            />
-            <div className="h-0 -translate-y-20 font-semibold">Django</div>
-          </div>
-        </motion.li>
-        <motion.li
-          onClick={() => {
-            setCssOpen(!isCssOpen);
-            if (!isCssOpen) {
-              document.body.style.overflow = "hidden";
-            } else {
-            }
-          }}
-          d
-          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] md:h-72 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
-        >
-          <div className="flex flex-col items-center justify-center w-full h-full">
-            <img
-              src="./assets/css.png"
-              alt="LinkedIn Profile"
-              className="scale-[33%]"
-            />
-            <div className="h-0 -translate-y-20 font-semibold">CSS</div>
-          </div>
-        </motion.li>
-        <motion.li
-          onClick={() => {
-            setHtmlOpen(!isHtmlOpen);
-            if (!isHtmlOpen) {
-              document.body.style.overflow = "hidden";
-            } else {
-            }
-          }}
-          d
-          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] md:h-72 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
-        >
-          <div className="flex flex-col items-center justify-center w-full h-full">
-            <img
-              src="./assets/html.png"
-              alt="LinkedIn Profile"
-              className="scale-[33%]"
-            />
-            <div className="h-0 -translate-y-20 font-semibold">HTML</div>
-          </div>
-        </motion.li>
-        <motion.li
-          onClick={() => {
-            setJavaScriptOpen(!isJavaScriptOpen);
-            if (!isJavaScriptOpen) {
-              document.body.style.overflow = "hidden";
-            } else {
-            }
-          }}
-          d
-          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] md:h-72 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
-        >
-          <div className="flex flex-col items-center justify-center w-full h-full">
-            <img
-              src="./assets/javascript.png"
-              alt="LinkedIn Profile"
-              className="scale-[33%]"
-            />
-            <div className="h-0 -translate-y-20 font-semibold">Javascript</div>
-          </div>
-        </motion.li>
-        <motion.li
-          onClick={() => {
-            setTailwindOpen(!isTailwindOpen);
-            if (!isTailwindOpen) {
-              document.body.style.overflow = "hidden";
-            } else {
-            }
-          }}
-          d
-          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] md:h-72 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
-        >
-          <div className="flex flex-col items-center justify-center w-full h-full">
-            <img
-              src="./assets/tailwind.png"
-              alt="LinkedIn Profile"
-              className="scale-[33%]"
-            />
-            <div className="h-0 -translate-y-20 font-semibold">Tailwind</div>
-          </div>
-        </motion.li>
+          <motion.li
+            variants={child}
+            onClick={() => {
+              setDjangoOpen(!isDjangoOpen);
+              if (!isDjangoOpen) {
+                document.body.style.overflow = "hidden";
+              } else {
+              }
+            }}
+            className="col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] h-72 bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+          >
+            <div className="flex flex-col items-center justify-center w-full h-full">
+              <img
+                src="./assets/django.png"
+                alt="LinkedIn Profile"
+                className="w-32"
+              />
+              <div className="translate-y-5 font-semibold">Django</div>
+            </div>
+          </motion.li>
+          <motion.li
+            variants={child}
+            onClick={() => {
+              setCssOpen(!isCssOpen);
+              if (!isCssOpen) {
+                document.body.style.overflow = "hidden";
+              } else {
+              }
+            }}
+            className="col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] h-72 bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+          >
+            <div className="flex flex-col items-center justify-center w-full h-full">
+              <img
+                src="./assets/css.png"
+                alt="LinkedIn Profile"
+                className="w-32"
+              />
+              <div className="translate-y-5 font-semibold">CSS</div>
+            </div>
+          </motion.li>
+          <motion.li
+            variants={child}
+            onClick={() => {
+              setHtmlOpen(!isHtmlOpen);
+              if (!isHtmlOpen) {
+                document.body.style.overflow = "hidden";
+              } else {
+              }
+            }}
+            className="col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] h-72 bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+          >
+            <div className="flex flex-col items-center justify-center w-full h-full">
+              <img
+                src="./assets/html.png"
+                alt="LinkedIn Profile"
+                className="w-32"
+              />
+              <div className="translate-y-5 font-semibold">HTML</div>
+            </div>
+          </motion.li>
+          <motion.li
+            variants={child}
+            onClick={() => {
+              setJavaScriptOpen(!isJavaScriptOpen);
+              if (!isJavaScriptOpen) {
+                document.body.style.overflow = "hidden";
+              } else {
+              }
+            }}
+            className="col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] h-72 bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+          >
+            <div className="flex flex-col items-center justify-center w-full h-full">
+              <img
+                src="./assets/javascript.png"
+                alt="LinkedIn Profile"
+                className="w-32"
+              />
+              <div className="translate-y-5 font-semibold">Javascript</div>
+            </div>
+          </motion.li>
+          <motion.li
+            variants={child}
+            onClick={() => {
+              setTailwindOpen(!isTailwindOpen);
+              if (!isTailwindOpen) {
+                document.body.style.overflow = "hidden";
+              } else {
+              }
+            }}
+            className="col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] h-72 bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+          >
+            <div className="flex flex-col items-center justify-center w-full h-full">
+              <img
+                src="./assets/tailwind.png"
+                alt="LinkedIn Profile"
+                className="w-32"
+              />
+              <div className="translate-y-5 font-semibold">Tailwind</div>
+            </div>
+          </motion.li>
 
-        <motion.li
-          onClick={() => {
-            setPythonOpen(!isPythonOpen);
-            if (!isPythonOpen) {
-              document.body.style.overflow = "hidden";
-            } else {
-            }
-          }}
-          d
-          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] md:h-72 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
-        >
-          <div className="flex flex-col items-center justify-center w-full h-full">
-            <img
-              src="./assets/django.png"
-              alt="LinkedIn Profile"
-              className="scale-[33%]"
-            />
-            <div className="h-0 -translate-y-20 font-semibold">Django</div>
-          </div>
-        </motion.li>
-        <motion.li
-          onClick={() => {
-            setSqlOpen(!isSqlOpen);
-            if (!isSqlOpen) {
-              document.body.style.overflow = "hidden";
-            } else {
-            }
-          }}
-          d
-          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] md:h-72 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
-        >
-          <div className="flex flex-col items-center justify-center w-full h-full">
-            <img
-              src="./assets/PostgreSQL_logo.png"
-              alt="LinkedIn Profile"
-              className="scale-[33%]"
-            />
-            <div className="h-0 -translate-y-20 font-semibold">SQL</div>
-          </div>
-        </motion.li>
-        <motion.li
-          onClick={() => {
-            setReactOpen(!isReactOpen);
-            if (!isReactOpen) {
-              document.body.style.overflow = "hidden";
-            } else {
-            }
-          }}
-          d
-          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] md:h-72 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
-        >
-          <div className="flex flex-col items-center justify-center w-full h-full">
-            <img
-              src="./assets/react.png"
-              alt="LinkedIn Profile"
-              className="scale-[33%]"
-            />
-            <div className="h-0 -translate-y-20 font-semibold">React</div>
-          </div>
-        </motion.li>
-        <motion.li
-          onClick={() => {
-            setGitOpen(!isGitOpen);
-            if (!isGitOpen) {
-              document.body.style.overflow = "hidden";
-            } else {
-            }
-          }}
-          d
-          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] md:h-72 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
-        >
-          <div className="flex flex-col items-center justify-center w-full h-full">
-            <img
-              src="./assets/Git.png"
-              alt="LinkedIn Profile"
-              className="scale-[33%]"
-            />
-            <div className="h-0 -translate-y-20 font-semibold">Git</div>
-          </div>
-        </motion.li>
-        <motion.li
-          onClick={() => {
-            setApiOpen(!isApiOpen);
-            if (!isApiOpen) {
-              document.body.style.overflow = "hidden";
-            } else {
-            }
-          }}
-          d
-          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] md:h-72 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
-        >
-          <div className="flex flex-col items-center justify-center w-full h-full">
-            <img
-              src="./assets/api.png"
-              alt="LinkedIn Profile"
-              className="scale-[33%]"
-            />
-            <div className="h-0 -translate-y-20 font-semibold">API</div>
-          </div>
-        </motion.li>
-        <motion.li
-          onClick={() => {
-            setScrumOpen(!isScrumOpen);
-            if (!isScrumOpen) {
-              document.body.style.overflow = "hidden";
-            } else {
-            }
-          }}
-          d
-          className="sm:col-span-2 md:col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] md:h-72 sm:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
-        >
-          <div className="flex flex-col items-center justify-center w-full h-full">
-            <img
-              src="./assets/scrum.png"
-              alt="LinkedIn Profile"
-              className="scale-[33%]"
-            />
-            <div className="h-0 -translate-y-20 font-semibold">Scrum</div>
-          </div>
-        </motion.li>
-        <ExpandableContent
-          isOpen={isPythonOpen}
-          setOpen={setPythonOpen}
-          title="Python"
-          content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
-          image="./assets/python.png"
-        />
-        <ExpandableContent
-          isOpen={isDjangoOpen}
-          setOpen={setDjangoOpen}
-          title="Django"
-          content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
-          image="./assets/django.png"
-        />
-        <ExpandableContent
-          isOpen={isCssOpen}
-          setOpen={setCssOpen}
-          title="CSS"
-          content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
-          image="./assets/css.png"
-        />
-        <ExpandableContent
-          isOpen={isHtmlOpen}
-          setOpen={setHtmlOpen}
-          title="HTML"
-          content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
-          image="./assets/html.png"
-        />
-        <ExpandableContent
-          isOpen={isJavaScriptOpen}
-          setOpen={setJavaScriptOpen}
-          title="Javascript"
-          content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
-          image="./assets/javascript.png"
-        />
-        <ExpandableContent
-          isOpen={isTailwindOpen}
-          setOpen={setTailwindOpen}
-          title="Tailwind"
-          content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
-          image="./assets/tailwind.png"
-        />
-        <ExpandableContent
-          isOpen={isSqlOpen}
-          setOpen={setSqlOpen}
-          title="Postgres"
-          content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
-          image="./assets/PostgreSQL_logo.png"
-        />
-        <ExpandableContent
-          isOpen={isReactOpen}
-          setOpen={setReactOpen}
-          title="React"
-          content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
-          image="./assets/react.png"
-        />
-        <ExpandableContent
-          isOpen={isGitOpen}
-          setOpen={setGitOpen}
-          title="Git"
-          content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
-          image="./assets/Git.png"
-        />
-        <ExpandableContent
-          isOpen={isApiOpen}
-          setOpen={setApiOpen}
-          title="Api"
-          content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
-          image="./assets/api.png"
-        />
-        <ExpandableContent
-          isOpen={isScrumOpen}
-          setOpen={setScrumOpen}
-          title="Scrum"
-          content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
-          image="./assets/scrum.png"
-        />
-      </motion.ul>
-    </section>
+          <motion.li
+            variants={child}
+            onClick={() => {
+              setPythonOpen(!isPythonOpen);
+              if (!isPythonOpen) {
+                document.body.style.overflow = "hidden";
+              } else {
+              }
+            }}
+            className="col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] h-72 bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+          >
+            <div className="flex flex-col items-center justify-center w-full h-full">
+              <img
+                src="./assets/django.png"
+                alt="LinkedIn Profile"
+                className="w-32"
+              />
+              <div className="translate-y-5 font-semibold">Django</div>
+            </div>
+          </motion.li>
+          <motion.li
+            variants={child}
+            onClick={() => {
+              setSqlOpen(!isSqlOpen);
+              if (!isSqlOpen) {
+                document.body.style.overflow = "hidden";
+              } else {
+              }
+            }}
+            className="col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] h-72 bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+          >
+            <div className="flex flex-col items-center justify-center w-full h-full">
+              <img
+                src="./assets/PostgreSQL_logo.png"
+                alt="LinkedIn Profile"
+                className="w-32"
+              />
+              <div className="translate-y-5 font-semibold">SQL</div>
+            </div>
+          </motion.li>
+          <motion.li
+            variants={child}
+            onClick={() => {
+              setReactOpen(!isReactOpen);
+              if (!isReactOpen) {
+                document.body.style.overflow = "hidden";
+              } else {
+              }
+            }}
+            className="col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] h-72 bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+          >
+            <div className="flex flex-col items-center justify-center w-full h-full">
+              <img
+                src="./assets/react.png"
+                alt="LinkedIn Profile"
+                className="w-32"
+              />
+              <div className="translate-y-5 font-semibold">React</div>
+            </div>
+          </motion.li>
+          <motion.li
+            variants={child}
+            onClick={() => {
+              setGitOpen(!isGitOpen);
+              if (!isGitOpen) {
+                document.body.style.overflow = "hidden";
+              } else {
+              }
+            }}
+            className="col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] h-72 bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+          >
+            <div className="flex flex-col items-center justify-center w-full h-full">
+              <img
+                src="./assets/Git.png"
+                alt="LinkedIn Profile"
+                className="w-32"
+              />
+              <div className="translate-y-5 font-semibold">Git</div>
+            </div>
+          </motion.li>
+          <motion.li
+            variants={child}
+            onClick={() => {
+              setApiOpen(!isApiOpen);
+              if (!isApiOpen) {
+                document.body.style.overflow = "hidden";
+              } else {
+              }
+            }}
+            className="col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] h-72 bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+          >
+            <div className="flex flex-col items-center justify-center w-full h-full">
+              <img
+                src="./assets/api.png"
+                alt="LinkedIn Profile"
+                className="w-32"
+              />
+              <div className="translate-y-5 font-semibold">Api</div>
+            </div>
+          </motion.li>
+          <motion.li
+            variants={child}
+            onClick={() => {
+              setScrumOpen(!isScrumOpen);
+              if (!isScrumOpen) {
+                document.body.style.overflow = "hidden";
+              } else {
+              }
+            }}
+            className="col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] h-72 bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+          >
+            <div className="flex flex-col items-center justify-center w-full h-full">
+              <img
+                src="./assets/scrum.png"
+                alt="LinkedIn Profile"
+                className="w-32"
+              />
+              <div className="translate-y-5 font-semibold">Scrum</div>
+            </div>
+          </motion.li>
+          <ExpandableContent
+            isOpen={isPythonOpen}
+            setOpen={setPythonOpen}
+            title="Python"
+            content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
+            image="./assets/python.png"
+          />
+          <ExpandableContent
+            isOpen={isDjangoOpen}
+            setOpen={setDjangoOpen}
+            title="Django"
+            content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
+            image="./assets/django.png"
+          />
+          <ExpandableContent
+            isOpen={isCssOpen}
+            setOpen={setCssOpen}
+            title="CSS"
+            content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
+            image="./assets/css.png"
+          />
+          <ExpandableContent
+            isOpen={isHtmlOpen}
+            setOpen={setHtmlOpen}
+            title="HTML"
+            content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
+            image="./assets/html.png"
+          />
+          <ExpandableContent
+            isOpen={isJavaScriptOpen}
+            setOpen={setJavaScriptOpen}
+            title="Javascript"
+            content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
+            image="./assets/javascript.png"
+          />
+          <ExpandableContent
+            isOpen={isTailwindOpen}
+            setOpen={setTailwindOpen}
+            title="Tailwind"
+            content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
+            image="./assets/tailwind.png"
+          />
+          <ExpandableContent
+            isOpen={isSqlOpen}
+            setOpen={setSqlOpen}
+            title="Postgres"
+            content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
+            image="./assets/PostgreSQL_logo.png"
+          />
+          <ExpandableContent
+            isOpen={isReactOpen}
+            setOpen={setReactOpen}
+            title="React"
+            content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
+            image="./assets/react.png"
+          />
+          <ExpandableContent
+            isOpen={isGitOpen}
+            setOpen={setGitOpen}
+            title="Git"
+            content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
+            image="./assets/Git.png"
+          />
+          <ExpandableContent
+            isOpen={isApiOpen}
+            setOpen={setApiOpen}
+            title="Api"
+            content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
+            image="./assets/api.png"
+          />
+          <ExpandableContent
+            isOpen={isScrumOpen}
+            setOpen={setScrumOpen}
+            title="Scrum"
+            content="I have been programming in Python for about a year now, and I have completed several projects using the language. Using python with additional to Django I have completed several projects using the language; A store website, Linkedin for developers, spotify room hosting, and a stock screener."
+            image="./assets/scrum.png"
+          />
+        </ul>
+      </div>
+    </motion.section>
   );
 }
 

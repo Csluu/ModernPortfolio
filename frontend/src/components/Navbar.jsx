@@ -52,7 +52,7 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
             className="text-[#1b1c1e] font-semibold text-lg w-[84px] justify-center place-items-center "
             style={{ textShadow: "1px 2px  rgb(0 0 0 /0.2)" }}
           >
-            <h1 className="w-36">Christopher Luu</h1>
+            <h1 className="xs:w-fit sm:w-36">Christopher Luu</h1>
           </div>
           <div className="flex items-center justify-center gap-4">
             <Link
@@ -93,21 +93,21 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
                 <img
                   alt="menu-icon"
                   src="../assets/menu.png"
-                  className="scale-[100%] h-6"
+                  className="hover:scale-105 hover:opacity-100 opacity-80 hover:ease-in-out transition duration-150 h-8"
                 />
               </button>
             </div>
           ) : (
             <div className="basis-full flex items-center justify-between mx-[40px] my-[24px]">
-              <div>Christopher</div>
+              <div className="font-semibold">Christopher</div>
               <button
                 className="p-2 z-40"
                 onClick={() => setIsMenuToggled(false)}
               >
                 <img
-                  alt="close-icon"
+                  alt="menu-icon"
                   src="../assets/cancel.png"
-                  className="hover:scale-105 hover:opacity-100 opacity-80 hover:ease-in-out transition duration-150 h-10"
+                  className="hover:scale-[135%] hover:opacity-70 opacity-50 hover:ease-in-out transition duration-150 h-8 scale-125"
                 ></img>
               </button>
             </div>
@@ -117,16 +117,8 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
       {/* Mobile Menu popup */}
       {!isDesktop && isMenuToggled && (
         <div>
-          <div className="fixed top-[90px] right-0 w-2/5 bg-slate-800 bg-opacity-80 m-4 rounded-lg shadow-highLight backdrop-blur-xl border-[1px] border-white border-opacity-[5%]">
+          <div className="fixed top-[90px] right-0 w-2/5 bg-slate-800 xs:w-48 m-3 rounded-lg shadow-highLight  border-[1px] border-white border-opacity-[5%]">
             <div className="flex flex-col gap-1 text-xl my-6 mx-7">
-              <Link
-                page="All"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-                isMenuToggled={isMenuToggled}
-                isDesktop={isDesktop}
-              />
-              <div className="h-[1px] bg-slate-700" />
               <div className="flex flex-col gap-2 text-xl">
                 <Link
                   page="About"
@@ -150,14 +142,14 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
                   isDesktop={isDesktop}
                 />
                 <Link
-                  page="Resume"
+                  page="Contact"
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                   isMenuToggled={isMenuToggled}
                   isDesktop={isDesktop}
                 />
                 <Link
-                  page="Contact"
+                  page="Resume"
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                   isMenuToggled={isMenuToggled}

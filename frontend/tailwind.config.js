@@ -26,14 +26,14 @@ module.exports = {
         "saturate-50": "saturate(50%)",
       },
     },
-  },
-  screens: {
-    xs: "480px",
-    ss: "620px",
-    sm: "768px",
-    md: "1060px",
-    lg: "1200px",
-    xl: "1700px",
+    screens: {
+      xs: "360px",
+      ss: "768px",
+      sm: "1024px",
+      md: "1280px",
+      lg: "1920px",
+      xl: "2560px",
+    },
   },
   plugins: [],
 };
