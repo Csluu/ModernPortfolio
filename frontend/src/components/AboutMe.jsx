@@ -6,7 +6,7 @@ function AboutMe() {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.25,
+        staggerChildren: 0.2,
       },
     },
   };

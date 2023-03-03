@@ -6,7 +6,7 @@ function Projects() {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.25,
+        staggerChildren: 0.2,
       },
     },
   };
@@ -35,42 +35,67 @@ function Projects() {
           <h1 style={{ textShadow: "2px 4px  rgb(0 0 0 /0.2)" }}>Projects</h1>
         </motion.header>
         <ul className="grid sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4  lg-grid-rows-3 w-full h-fit gap-5">
-          <motion.li
-            variants={child}
-            className="  sm:col-span-2 md:col-span-2 md:row-span-2 rounded-2xl shadow-highLight border-[1px] border-white border-opacity-[15%] md:h-[576px] xs:h-fit bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
-          >
-            Picture
+          <motion.li variants={child} className="col-span-1 row-span-1">
+            <div
+              className=" text-[#70798C] text-opacity-75 text-[50px]
+            hover:text-orange-500 font-semibold col-span-1 row-span-1
+            rounded-2xl shadow-highLight border-[1px] border-white
+            border-opacity-[15%] xs:h-72 bg-[#1b1c1e] hover:shadow-glow
+            hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out
+            transition duration-150 flex items-center justify-center"
+            >
+              Admin Panel
+            </div>
+          </motion.li>
+          <motion.li variants={child} className="col-span-2 row-span-1">
+            <div
+              className=" text-[#70798C] text-opacity-75 text-[50px]
+            hover:text-orange-500 font-semibold col-span-1 row-span-1
+            rounded-2xl shadow-highLight border-[1px] border-white
+            border-opacity-[15%] xs:h-72 bg-[#1b1c1e] hover:shadow-glow
+            hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out
+            transition duration-150 flex items-center justify-center"
+            >
+              Admin Panel
+            </div>
+          </motion.li>
+
+          <motion.li variants={child} className="col-span-1 row-span-1">
+            <div
+              className=" text-[#70798C] text-opacity-75 text-[50px]
+            hover:text-orange-500 font-semibold col-span-1 row-span-1
+            rounded-2xl shadow-highLight border-[1px] border-white
+            border-opacity-[15%] xs:h-72 bg-[#1b1c1e] hover:shadow-glow
+            hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out
+            transition duration-150 flex items-center justify-center"
+            >
+              Music Room
+            </div>
           </motion.li>
           <motion.li
             variants={child}
-            className=" text-[#70798C] text-opacity-75 text-[50px] hover:text-orange-500 font-semibold col-span-1 row-span-1 rounded-2xl shadow-highLight border-[1px] border-white border-opacity-[15%] xs:h-72 bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+            className="sm:col-span-2 md:col-span-2 md:row-span-2"
           >
-            eCommerce
+            <div
+              className="  rounded-2xl
+            shadow-highLight border-[1px] border-white border-opacity-[15%]
+            md:h-[576px] xs:h-fit bg-[#1b1c1e] flex items-center justify-center"
+            >
+              Picture
+            </div>
           </motion.li>
 
           <motion.li
             variants={child}
-            className=" text-[#70798C] text-opacity-75 text-[50px] hover:text-orange-500 font-semibold col-span-1 row-span-1 rounded-2xl shadow-highLight border-[1px] border-white border-opacity-[15%] xs:h-72 bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
+            className="sm:col-span-2 md:col-span-2 md:row-span-2"
           >
-            Music Room
-          </motion.li>
-          <motion.li
-            variants={child}
-            className="  sm:col-span-2 md:col-span-2 md:row-span-2 rounded-2xl shadow-highLight border-[1px] border-white border-opacity-[15%] md:h-[576px] xs:fit bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
-          >
-            Description
-          </motion.li>
-          <motion.li
-            variants={child}
-            className=" text-[#70798C] text-opacity-75 text-[50px] hover:text-orange-500 font-semibold col-span-1 row-span-1 rounded-2xl shadow-highLight border-[1px] border-white border-opacity-[15%] xs:h-72 bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
-          >
-            Admin Panel
-          </motion.li>
-          <motion.li
-            variants={child}
-            className=" text-[#70798C] text-opacity-75 text-[50px] hover:text-orange-500 font-semibold col-span-1 row-span-1 rounded-2xl shadow-highLight border-[1px] border-white border-opacity-[15%] xs:h-72 bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center"
-          >
-            Admin Panel
+            <div
+              className="  rounded-2xl
+            shadow-highLight border-[1px] border-white border-opacity-[15%]
+            md:h-[576px] xs:h-fit bg-[#1b1c1e] flex items-center justify-center"
+            >
+              Picture
+            </div>
           </motion.li>
         </ul>
       </div>
