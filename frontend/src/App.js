@@ -6,6 +6,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Resume from "./components/Resume";
 import { useRef } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -52,7 +53,8 @@ function App() {
       </div>
       <div ref={contactRef}>
         <Contact />
-      </div>
+      </div>{" "}
+      *{/* <Resume /> */}
       <Footer />
     </div>
   );

@@ -72,7 +72,7 @@ const Contact = () => {
             <form
               target="_blank"
               onSubmit={onSubmit}
-              action="https://formsubmit.co/"
+              action="https://formsubmit.co/008b3826f2c14c33aed03f67bff70275"
               method="POST"
               className="p-10 h-full flex flex-col justify-center gap-1"
             >

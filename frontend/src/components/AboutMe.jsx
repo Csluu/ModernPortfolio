@@ -38,13 +38,13 @@ function AboutMe() {
         <ul className="grid sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4  lg-grid-rows-3 w-full h-fit gap-5">
           <motion.li
             variants={child}
-            className="bg-orange-500 sm:col-span-1 md:col-span-1 lg:col-span-1 rounded-xl shadow-highLight border-[1px] border-white border-opacity-[15%] h-72 flex justify-center gap-5"
+            className=" sm:col-span-1 md:col-span-1 lg:col-span-1 h-72"
           >
-            <div className="h-full w-full rounded-xl bg-profile-picture border-[1px] border-white border-opacity-[15%] bg-cover bg-center"></div>
+            <div className="h-full w-full rounded-xl bg-profile-picture border-[1px] shadow-highLight  border-white border-opacity-[15%] bg-cover bg-center"></div>
           </motion.li>
           <motion.li
             variants={child}
-            className="bg-orange-500 sm:col-span-1 md:col-span-2 lg:col-span-3 rounded-xl shadow-highLight border-[1px] border-white border-opacity-[15%] h-72 flex justify-center p-5 gap-5"
+            className="bg-orange-bg sm:col-span-1 md:col-span-2 lg:col-span-3 rounded-xl shadow-highLight border-[1px] border-white border-opacity-[15%] h-72 flex justify-center p-5 gap-5"
           >
             <div className="flex flex-col font-semibold xs:justify-evenly justify-center bg-am">
               <p className="text-[35px] ss:text-[80px] sm:text-[55px] md:text-[80px] lg:text-[120px] text-[#1b1c1e] font-quicksand">
@@ -81,7 +81,7 @@ function AboutMe() {
                 href="https://www.linkedin.com/in/csluu/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center justify-center w-full h-full"
+                className="flex flex-col items-center justify-center w-full h-full hover:text-orange-500"
               >
                 <img
                   src="./assets/linkedin.png"
@@ -95,7 +95,7 @@ function AboutMe() {
 
           <motion.li variants={child}>
             <div className="col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 border-white border-opacity-[15%] md:h-72 sm:h-auto lg:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out duration-150 flex items-center justify-center">
-              <div className="flex flex-col items-center justify-center w-full h-full">
+              <div className="flex flex-col items-center justify-center w-full h-full hover:text-orange-500">
                 <img
                   src="./assets/resumeicon.png"
                   alt="Github Profile"
@@ -108,11 +108,11 @@ function AboutMe() {
 
           <motion.li variants={child}>
             <div className="col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 border-white border-opacity-[15%] md:h-72 sm:h-auto lg:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center">
-              <div className="flex flex-col items-center justify-center w-full h-full">
+              <div className="flex flex-col items-center justify-center w-full h-full hover:text-orange-500">
                 <img
                   src="./assets/mail.png"
                   alt="Github Profile"
-                  className="scale-[44%]"
+                  className="scale-[44%] "
                 />
                 <div className="-translate-y-10 font-semibold">Contact Me</div>
               </div>
@@ -125,7 +125,7 @@ function AboutMe() {
                 href="https://github.com/Csluu"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center justify-center w-full h-full"
+                className="flex flex-col items-center justify-center w-full h-full hover:text-orange-500"
               >
                 <img
                   src="./assets/github.png"

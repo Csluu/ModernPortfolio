@@ -85,7 +85,7 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
         <div className="basis-full">
           {!isMenuToggled ? (
             <div className="flex items-center justify-between mx-[40px] my-[24px]">
-              <div className="font-semibold">Christopher</div>
+              <div className="font-semibold text-[#1b1c1e]">Christopher</div>
               <button
                 className="opacity-50 p-2 hover:opacity-60 hover:scale-105 hover:ease-in-out transition duration-150"
                 onClick={() => setIsMenuToggled(true)}
@@ -99,7 +99,7 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
             </div>
           ) : (
             <div className="basis-full flex items-center justify-between mx-[40px] my-[24px]">
-              <div className="font-semibold">Christopher</div>
+              <div className="font-semibold text-[#1b1c1e]">Christopher</div>
               <button
                 className="p-2 z-40"
                 onClick={() => setIsMenuToggled(false)}

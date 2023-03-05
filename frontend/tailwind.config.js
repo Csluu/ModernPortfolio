@@ -21,6 +21,7 @@ module.exports = {
       backgroundImage: {
         "profile-picture": "url('./assets/profile.jpg')",
         linux: "url('./assets/linux.png')",
+        "orange-bg": "linear-gradient(to top,  #EC6200, #FF7514)",
       },
       filter: {
         "saturate-50": "saturate(50%)",
