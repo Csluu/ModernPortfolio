@@ -2,15 +2,28 @@ import React from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const Link = ({
+const LinkAnchor = ({
   page,
   selectedPage,
   setSelectedPage,
   isDesktop,
   isMenuToggled,
 }) => {
-  return (
+  const isResumePage = window.location.href === "http://localhost:3000/Resume";
+  return isResumePage ? (
+    <Link to="/">
+      <div
+        className="text-black font-semibold text-lg hover:text-orange-500 transition duration-150 hover:ease-in-out"
+        style={{ textShadow: "1px 2px  rgb(0 0 0 /0.2)" }}
+      >
+        <div className="hover:scale-105 px-4 py-1.5 transition duration-150">
+          {page}
+        </div>
+      </div>
+    </Link>
+  ) : (
     <AnchorLink
       className={`${
         selectedPage === page ? "text-orange-500" : "text-[#1b1c1e]"
@@ -52,33 +65,38 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
             className="text-[#1b1c1e] font-semibold text-lg w-[84px] justify-center place-items-center "
             style={{ textShadow: "1px 2px  rgb(0 0 0 /0.2)" }}
           >
-            <h1 className="xs:w-fit sm:w-36">Christopher Luu</h1>
+            <h1 className="xs:w-fit sm:w-36">
+              <Link to="/">Christopher Luu</Link>
+            </h1>
           </div>
           <div className="flex items-center justify-center gap-4">
-            <Link
+            <LinkAnchor
               page="About"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
+            <LinkAnchor
               page="Projects"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
+            <LinkAnchor
               page="Skills"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
+            <LinkAnchor
               page="Contact"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
           </div>
-          <div className="flex rounded-lg text-[#1b1c1e] font-semibold bg-orange-500 py-1 px-2 hover:scale-105 text-lg w-[84px] shadow-highLight-text border-[1px] border-white border-opacity-[15%]">
+          <Link
+            to="/Resume"
+            className="flex rounded-lg text-[#1b1c1e] font-semibold bg-orange-500 py-1 px-2 hover:scale-105 text-lg w-[84px] shadow-highLight-text border-[1px] border-white border-opacity-[15%]"
+          >
             Resume
-          </div>
+          </Link>
         </div>
       ) : (
         // Mobile Navbar
@@ -120,35 +138,35 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
           <div className="fixed top-[90px] right-0 w-2/5 bg-slate-800 xs:w-48 m-3 rounded-lg shadow-highLight  border-[1px] border-white border-opacity-[5%]">
             <div className="flex flex-col gap-1 text-xl my-6 mx-7">
               <div className="flex flex-col gap-2 text-xl">
-                <Link
+                <LinkAnchor
                   page="About"
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                   isMenuToggled={isMenuToggled}
                   isDesktop={isDesktop}
                 />
-                <Link
+                <LinkAnchor
                   page="Projects"
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                   isMenuToggled={isMenuToggled}
                   isDesktop={isDesktop}
                 />
-                <Link
+                <LinkAnchor
                   page="Skills"
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                   isMenuToggled={isMenuToggled}
                   isDesktop={isDesktop}
                 />
-                <Link
+                <LinkAnchor
                   page="Contact"
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                   isMenuToggled={isMenuToggled}
                   isDesktop={isDesktop}
                 />
-                <Link
+                <LinkAnchor
                   page="Resume"
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}

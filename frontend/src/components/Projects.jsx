@@ -26,7 +26,7 @@ function Projects() {
     >
       <div
         id="Projects"
-        className="flex flex-col basis-11/12 max-w-[1400px] sm:mx-5 lg:mx-5 xl-mx-auto h-fit gap-16"
+        className="flex flex-col basis-11/12 max-w-[1400px] sm:mx-5 lg:mx-5 xl-mx-auto h-fit gap-16 pt-10"
       >
         <motion.header
           variants={child}
@@ -34,8 +34,8 @@ function Projects() {
         >
           <h1 style={{ textShadow: "2px 4px  rgb(0 0 0 /0.2)" }}>Projects</h1>
         </motion.header>
-        <ul className="grid sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4  lg-grid-rows-3 w-full h-fit gap-5">
-          <motion.li variants={child} className="col-span-1 row-span-1">
+        <ul className="grid sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-6  lg-grid-rows-3 w-full h-fit gap-5">
+          <motion.li variants={child} className="col-span-2 row-span-1">
             <div
               className=" text-[#70798C] text-opacity-75 text-[50px]
             hover:text-orange-500 font-semibold col-span-1 row-span-1
@@ -44,7 +44,7 @@ function Projects() {
             hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out
             transition duration-150 flex items-center justify-center"
             >
-              Admin Panel
+              Bastion
             </div>
           </motion.li>
           <motion.li variants={child} className="col-span-2 row-span-1">
@@ -56,11 +56,11 @@ function Projects() {
             hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out
             transition duration-150 flex items-center justify-center"
             >
-              Admin Panel
+              DevSearch
             </div>
           </motion.li>
 
-          <motion.li variants={child} className="col-span-1 row-span-1">
+          <motion.li variants={child} className="col-span-2 row-span-1">
             <div
               className=" text-[#70798C] text-opacity-75 text-[50px]
             hover:text-orange-500 font-semibold col-span-1 row-span-1
@@ -69,12 +69,12 @@ function Projects() {
             hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out
             transition duration-150 flex items-center justify-center"
             >
-              Music Room
+              StudyBud
             </div>
           </motion.li>
           <motion.li
             variants={child}
-            className="sm:col-span-2 md:col-span-2 md:row-span-2"
+            className="sm:col-span-2 md:col-span-3 md:row-span-2"
           >
             <div
               className="  rounded-2xl
@@ -87,7 +87,7 @@ function Projects() {
 
           <motion.li
             variants={child}
-            className="sm:col-span-2 md:col-span-2 md:row-span-2"
+            className="sm:col-span-2 md:col-span-3 md:row-span-2"
           >
             <div
               className="  rounded-2xl

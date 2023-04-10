@@ -39,17 +39,19 @@ function Skills() {
                 visible: { opacity: 1, scale: 1.0 },
               }}
               onClick={() => setOpen(!isOpen)}
-              className="flex flex-col fixed xs:top-20 ss:top-1/3 ss:left-[8.5%] sm:left-[20%] md:left-1/4 lg:left-1/3 xl:left-[37.5%] p-10 xs:mx-2 ss:h-96 xs:w-fit ss:mx-5 ss:w-[640px] bg-[#1b1c1e] rounded-xl justify-start shadow-highLight backdrop-blur-2xl border-[1px] border-white border-opacity-[15%]  gap-3 hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150"
+              className="flex flex-col fixed xs:top-20 ss:top-1/3 ss:left-[8.5%] sm:left-[20%] md:left-1/4 lg:left-1/3 xl:left-[37.5%] xs:mx-2 ss:h-96 xs:w-fit ss:mx-5 ss:w-[640px]"
             >
-              <header className="flex justify-between place-items-center gap-5 ">
-                <h1 className="text-[#FFF5EE] font-semibold text-[50px]">
-                  {title}
-                </h1>
-                <img src={image} alt={title} className="scale-[75%] h-16" />
-              </header>
-              <p className="text-[#70798C] text-opacity-75 text-[20px]">
-                {content}
-              </p>
+              <div className="flex justify-start flex-col p-10 w-full h-full hover:shadow-glow hover:shadow-orange-500 hover:ease-in-out transition duration-150 rounded-xl bg-[#1b1c1e] shadow-highLight border-[1px] border-white border-opacity-[15%] gap-3 backdrop-blur-2xl">
+                <header className="flex justify-between place-items-center gap-5 ">
+                  <h1 className="text-[#FFF5EE] font-semibold text-[50px]">
+                    {title}
+                  </h1>
+                  <img src={image} alt={title} className="scale-[75%] h-16" />
+                </header>
+                <p className="text-[#70798C] text-opacity-75 text-[20px]">
+                  {content}
+                </p>
+              </div>
             </motion.div>
           </div>
         )}
@@ -81,7 +83,7 @@ function Skills() {
     >
       <div
         id="Skills"
-        className="flex flex-col basis-11/12 max-w-[1400px] sm:mx-5 lg:mx-5 xl-mx-auto h-fit gap-12"
+        className="flex flex-col basis-11/12 max-w-[1400px] sm:mx-5 lg:mx-5 xl-mx-auto h-fit gap-12 pt-10"
       >
         <header className="flex relative top-10 ss:text-[150px] xs:text-[60px] xs:place-items-end xs:h-32 sm:text-[180px] justify-center ss:h-60 text-orange-500 font-semibold">
           <h1 style={{ textShadow: "2px 4px  rgb(0 0 0 / 0.2)" }}>Skills</h1>

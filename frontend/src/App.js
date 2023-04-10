@@ -1,14 +1,12 @@
 import Navbar from "./components/Navbar";
 import { useEffect, useState } from "react";
 import useMediaQuery from "./hooks/useMediaQuery";
-import AboutMe from "./components/AboutMe";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
-import Contact from "./components/Contact";
+import Home from "./components/Home";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume";
 import { useRef } from "react";
 import { useInView } from "react-intersection-observer";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("About");
@@ -42,19 +40,24 @@ function App() {
     <div className="App">
       <div className="fixed top-0 z-[-1] w-full h-full bg-linux saturate-50"></div>
       <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-      <div ref={aboutMeRef}>
-        <AboutMe />
-      </div>
-      <div ref={projectsRef}>
-        <Projects />
-      </div>
-      <div ref={skillsRef}>
-        <Skills />
-      </div>
-      <div ref={contactRef}>
-        <Contact />
-      </div>{" "}
-      *{/* <Resume /> */}
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Home
+              aboutMeRef={aboutMeRef}
+              projectsRef={projectsRef}
+              skillsRef={skillsRef}
+              contactRef={contactRef}
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+          }
+          exact
+        />
+        s
+        <Route path="/resume" element={<Resume />} />
+      </Routes>
       <Footer />
     </div>
   );

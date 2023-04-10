@@ -19,12 +19,18 @@ function Resume() {
 
   return (
     <motion.div
-      variant={container}
       className="flex w-full justify-center h-fit"
+      variants={container}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
     >
       <main className="flex basis-11/12 max-w-[1400px] xs:mx-5 h-fit xl:h-fit gap-5 px-10">
         <article className="flex flex-col gap-5 text-[#1b1c1e] mt-32 w-[500px] h-fit">
-          <motion.section className="flex flex-col justify-center gap-5 w-full h-96 bg-orange-bg text-[#1b1c1e] rounded-xl p-10 font-semibold shadow-highLight  border-[1px] border-white border-opacity-[15%]">
+          <motion.section
+            variants={child}
+            className="flex flex-col justify-center gap-5 w-full h-96 bg-orange-bg text-[#1b1c1e] rounded-xl p-10 font-semibold shadow-highLight  border-[1px] border-white border-opacity-[15%]"
+          >
             <div className="flex justify-center w-full">
               <div className="h-48 w-48 rounded-full bg-profile-picture bg-cover bg-center shadow-highLight  border-[1px] border-white border-opacity-[15%]"></div>
             </div>
@@ -33,36 +39,48 @@ function Resume() {
               <h2 className="text-[25px]">Software Developer</h2>
             </header>
           </motion.section>
-          <motion.section className="w-full h-fit bg-[#1b1c1e] rounded-xl shadow-highLight  border-[1px] border-white border-opacity-[15%] text-white text-[25px] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150">
-            <a
-              href="https://www.linkedin.com/in/csluu/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-row gap-5 w-full h-full p-10"
-            >
-              <img
-                src="./assets/linkedin.png"
-                alt="Linkedin"
-                className="h-10"
-              />
-              Linkedin
-            </a>
+          <motion.section variants={child}>
+            <div className="w-full h-fit bg-[#1b1c1e] rounded-xl shadow-highLight  border-[1px] border-white border-opacity-[15%] text-white text-[25px]  hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150">
+              <a
+                href="https://www.linkedin.com/in/csluu/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-row gap-5 w-full h-full p-10"
+              >
+                <img
+                  src="./assets/linkedin.png"
+                  alt="Linkedin"
+                  className="h-10"
+                />
+                Linkedin
+              </a>
+            </div>
           </motion.section>
-          <motion.section className="w-full h-fit bg-[#1b1c1e] rounded-xl shadow-highLight  border-[1px] border-white border-opacity-[15%] text-white text-[25px] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150">
-            <a
-              href="https://github.com/Csluu"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-row gap-5 w-full h-full p-10"
-            >
-              <img src="./assets/github.png" alt="Linkedin" className="h-10" />
-              Github
-            </a>
+          <motion.section variants={child}>
+            <div className="w-full h-fit bg-[#1b1c1e] rounded-xl shadow-highLight  border-[1px] border-white border-opacity-[15%] text-white text-[25px] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150">
+              {" "}
+              <a
+                href="https://github.com/Csluu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-row gap-5 w-full h-full p-10"
+              >
+                <img
+                  src="./assets/github.png"
+                  alt="Linkedin"
+                  className="h-10"
+                />
+                Github
+              </a>
+            </div>
           </motion.section>
         </article>
         <div className="text-[#70798C] text-opacity-75 mt-32 w-full h-fit text-[20px]">
           <ul className="flex flex-col gap-5 h-full">
-            <motion.li className="flex flex-col font-semibold bg-[#1b1c1e] p-10 rounded-xl gap-5 shadow-highLight  border-[1px] border-white border-opacity-[15%]">
+            <motion.li
+              variants={child}
+              className="flex flex-col font-semibold bg-[#1b1c1e] p-10 rounded-xl gap-5 shadow-highLight  border-[1px] border-white border-opacity-[15%]"
+            >
               <header className="text-orange-500 text-opacity-100 text-[35px]">
                 Projects
               </header>
@@ -104,7 +122,10 @@ function Resume() {
                 </li>
               </ul>
             </motion.li>
-            <motion.li className="font-semibold bg-[#1b1c1e] p-10 rounded-xl shadow-highLight  border-[1px] border-white border-opacity-[15%]">
+            <motion.li
+              variants={child}
+              className="font-semibold bg-[#1b1c1e] p-10 rounded-xl shadow-highLight  border-[1px] border-white border-opacity-[15%]"
+            >
               <header className="text-orange-500 text-opacity-100 text-[35px]">
                 Work Experience
               </header>
@@ -129,7 +150,10 @@ function Resume() {
                 requirements.
               </p>
             </motion.li>
-            <motion.li className="font-semibold bg-[#1b1c1e] p-10 rounded-xl shadow-highLight  border-[1px] border-white border-opacity-[15%]">
+            <motion.li
+              variants={child}
+              className="font-semibold bg-[#1b1c1e] p-10 rounded-xl shadow-highLight  border-[1px] border-white border-opacity-[15%]"
+            >
               <header className="text-orange-500 text-opacity-100 text-[35px]">
                 Education
               </header>
@@ -139,7 +163,10 @@ function Resume() {
               <h2>B.F.A Computer Game Design</h2>
               <p>Summa Cum Laude; 3.91 GPA</p>
             </motion.li>
-            <motion.li className="font-semibold bg-[#1b1c1e] p-10 rounded-xl shadow-highLight  border-[1px] border-white border-opacity-[15%]">
+            <motion.li
+              variants={child}
+              className="font-semibold bg-[#1b1c1e] p-10 rounded-xl shadow-highLight  border-[1px] border-white border-opacity-[15%]"
+            >
               <header className="text-orange-500 text-opacity-100 text-[35px]">
                 Technical Skills
               </header>

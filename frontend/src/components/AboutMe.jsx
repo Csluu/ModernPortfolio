@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
-function AboutMe() {
+function AboutMe(selectedPage, setSelectedPage) {
   const container = {
     hidden: {},
     visible: {
@@ -27,7 +29,7 @@ function AboutMe() {
     >
       <div
         id="About"
-        className="flex flex-col basis-11/12 max-w-[1400px] xs:mx-5 h-fit xl:h-screen gap-12"
+        className="flex flex-col basis-11/12 max-w-[1400px] xs:mx-5 h-fit xl:h-fit gap-12"
       >
         <motion.header
           variants={child}
@@ -95,27 +97,34 @@ function AboutMe() {
 
           <motion.li variants={child}>
             <div className="col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 border-white border-opacity-[15%] md:h-72 sm:h-auto lg:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out duration-150 flex items-center justify-center">
-              <div className="flex flex-col items-center justify-center w-full h-full hover:text-orange-500">
+              <Link
+                to="/Resume"
+                className="flex flex-col items-center justify-center w-full h-full hover:text-orange-500"
+              >
                 <img
                   src="./assets/resumeicon.png"
                   alt="Github Profile"
                   className="scale-[44%]"
                 />
                 <div className="-translate-y-10 font-semibold">Resume</div>
-              </div>
+              </Link>
             </div>
           </motion.li>
 
           <motion.li variants={child}>
             <div className="col-span-1 rounded-xl shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 border-white border-opacity-[15%] md:h-72 sm:h-auto lg:h-auto bg-[#1b1c1e] hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 flex items-center justify-center">
-              <div className="flex flex-col items-center justify-center w-full h-full hover:text-orange-500">
+              <AnchorLink
+                className="flex flex-col items-center justify-center w-full h-full hover:text-orange-500"
+                href={`#${"Contact"}`}
+                onClick={() => setSelectedPage("Contact")}
+              >
                 <img
                   src="./assets/mail.png"
                   alt="Github Profile"
                   className="scale-[44%] "
                 />
                 <div className="-translate-y-10 font-semibold">Contact Me</div>
-              </div>
+              </AnchorLink>
             </div>
           </motion.li>
 
