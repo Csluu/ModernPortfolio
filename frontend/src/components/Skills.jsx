@@ -79,16 +79,16 @@ function Skills() {
       variants={container}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.1 }}
     >
       <div
         id="Skills"
-        className="flex flex-col basis-11/12 max-w-[1400px] sm:mx-5 lg:mx-5 xl-mx-auto h-fit gap-12 pt-10"
+        className="flex flex-col basis-11/12 max-w-[1400px] xs:mx-5 lg:mx-5 xl-mx-auto h-fit gap-12 pt-10"
       >
         <header className="flex relative top-10 ss:text-[150px] xs:text-[60px] xs:place-items-end xs:h-32 sm:text-[180px] justify-center ss:h-60 text-orange-500 font-semibold">
           <h1 style={{ textShadow: "2px 4px  rgb(0 0 0 / 0.2)" }}>Skills</h1>
         </header>
-        <ul className="grid sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 w-full h-fit gap-5">
+        <ul className="grid xs:grid-cols-1 ss:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full h-fit gap-5">
           <motion.li
             variants={child}
             onClick={() => {
@@ -98,7 +98,7 @@ function Skills() {
               } else {
               }
             }}
-            className="col-span-1 "
+            className="col-span-1"
           >
             <div className="flex flex-col items-center justify-center w-full rounded-xl hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] h-72 bg-[#1b1c1e]">
               <img src="./assets/python.png" alt="python" className="w-32" />
@@ -135,7 +135,7 @@ function Skills() {
               } else {
               }
             }}
-            className="col-span-1 "
+            className="col-span-1"
           >
             <div className="flex flex-col items-center justify-center w-full rounded-xl hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] h-72 bg-[#1b1c1e]">
               <img
@@ -155,7 +155,7 @@ function Skills() {
               } else {
               }
             }}
-            className="col-span-1 "
+            className="col-span-1"
           >
             <div className="flex flex-col items-center justify-center w-full rounded-xl hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] h-72 bg-[#1b1c1e]">
               <img
@@ -175,7 +175,7 @@ function Skills() {
               } else {
               }
             }}
-            className="col-span-1 "
+            className="col-span-1"
           >
             <div className="flex flex-col items-center justify-center w-full rounded-xl hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] h-72 bg-[#1b1c1e]">
               <img
@@ -195,7 +195,7 @@ function Skills() {
               } else {
               }
             }}
-            className="col-span-1 "
+            className="col-span-1"
           >
             <div className="flex flex-col items-center justify-center w-full rounded-xl hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] h-72 bg-[#1b1c1e]">
               <img
@@ -216,7 +216,7 @@ function Skills() {
               } else {
               }
             }}
-            className="col-span-1 "
+            className="col-span-1"
           >
             <div className="flex flex-col items-center justify-center w-full rounded-xl hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] h-72 bg-[#1b1c1e]">
               <img
@@ -236,7 +236,7 @@ function Skills() {
               } else {
               }
             }}
-            className="col-span-1 "
+            className="col-span-1"
           >
             <div className="flex flex-col items-center justify-center w-full rounded-xl hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] h-72 bg-[#1b1c1e]">
               <img
@@ -256,7 +256,7 @@ function Skills() {
               } else {
               }
             }}
-            className="col-span-1 "
+            className="col-span-1"
           >
             <div className="flex flex-col items-center justify-center w-full rounded-xl hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] h-72 bg-[#1b1c1e]">
               <img
@@ -276,7 +276,7 @@ function Skills() {
               } else {
               }
             }}
-            className="col-span-1 "
+            className="col-span-1"
           >
             <div className="flex flex-col items-center justify-center w-full rounded-xl hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] h-72 bg-[#1b1c1e]">
               <img
@@ -296,7 +296,7 @@ function Skills() {
               } else {
               }
             }}
-            className="col-span-1 "
+            className="col-span-1"
           >
             <div className="flex flex-col items-center justify-center w-full rounded-xl hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] h-72 bg-[#1b1c1e]">
               <img
@@ -316,7 +316,7 @@ function Skills() {
               } else {
               }
             }}
-            className="col-span-1 "
+            className="col-span-1"
           >
             <div className="flex flex-col items-center justify-center w-full rounded-xl hover:shadow-glow hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out transition duration-150 shadow-highLight  border-[1px] text-[25px] text-[#70798C] text-opacity-75 hover:text-orange-500 border-white border-opacity-[15%] h-72 bg-[#1b1c1e]">
               <img
