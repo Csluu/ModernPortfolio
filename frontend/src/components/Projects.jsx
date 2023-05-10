@@ -46,15 +46,18 @@ function Projects() {
 				>
 					<h1 style={{ textShadow: "2px 4px  rgb(0 0 0 /0.2)" }}>Projects</h1>
 				</motion.header>
-				<ul className="grid sm:grid-cols-6 lg-grid-rows-3 w-full h-fit gap-5">
+				<ul className="grid ss:grid-cols-1 sm:grid-cols-6 lg-grid-rows-3 w-full h-fit gap-5">
 					<motion.li variants={child} className="col-span-2 row-span-1">
 						<div
-							className=" text-[#70798C] text-opacity-75 xs:text-[40px] ss:text-[75px] lg:text-[75px]
-            hover:text-orange-500 font-semibold col-span-1 row-span-1
-            rounded-2xl shadow-highLight border-[1px] border-white
-            border-opacity-[15%] xs:h-72 bg-[#1b1c1e] hover:shadow-glow
-            hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out
-            transition duration-150 flex items-center justify-center"
+							className={`${
+								currentProject === "Kanban"
+									? "text-orange-500"
+									: "text-[#70798C] text-opacity-75"
+							} hover:text-orange-500 font-semibold col-span-1 row-span-1
+			rounded-2xl shadow-highLight border-[1px] border-white
+			border-opacity-[15%] xs:h-72 bg-[#1b1c1e] hover:shadow-glow
+			hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out
+			transition duration-150 flex items-center justify-center text-opacity-75 xs:text-[40px] ss:text-[75px] sm:text-[40px] md:text-[60px] lg:text-[75px]`}
 							onClick={() => handleButtonClick("Kanban")}
 						>
 							Kanban
@@ -62,12 +65,15 @@ function Projects() {
 					</motion.li>
 					<motion.li variants={child} className="col-span-2 row-span-1">
 						<div
-							className=" text-[#70798C] text-opacity-75 xs:text-[40px] ss:text-[75px] lg:text-[75px]
-            hover:text-orange-500 font-semibold col-span-1 row-span-1
-            rounded-2xl shadow-highLight border-[1px] border-white
-            border-opacity-[15%] xs:h-72 bg-[#1b1c1e] hover:shadow-glow
-            hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out
-            transition duration-150 flex items-center justify-center"
+							className={`${
+								currentProject === "DevSearch"
+									? "text-orange-500"
+									: "text-[#70798C] text-opacity-75"
+							} hover:text-orange-500 font-semibold col-span-1 row-span-1
+			rounded-2xl shadow-highLight border-[1px] border-white
+			border-opacity-[15%] xs:h-72 bg-[#1b1c1e] hover:shadow-glow
+			hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out
+			transition duration-150 flex items-center justify-center text-opacity-75 xs:text-[40px] ss:text-[75px] sm:text-[40px] md:text-[60px] lg:text-[75px]`}
 							onClick={() => handleButtonClick("DevSearch")}
 						>
 							DevSearch
@@ -75,12 +81,15 @@ function Projects() {
 					</motion.li>
 					<motion.li variants={child} className="col-span-2 row-span-1">
 						<div
-							className="text-[#70798C] text-opacity-75 xs:text-[40px] ss:text-[70px] lg:text-[70px]
-            hover:text-orange-500 font-semibold col-span-1 row-span-1
-            rounded-2xl shadow-highLight border-[1px] border-white
-            border-opacity-[15%] xs:h-72 bg-[#1b1c1e] hover:shadow-glow
-            hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out
-            transition duration-150 flex items-center justify-center place-items-center text-center"
+							className={`${
+								currentProject === "Article Summarizer"
+									? "text-orange-500"
+									: "text-[#70798C] text-opacity-75"
+							} hover:text-orange-500 font-semibold col-span-1 row-span-1
+			rounded-2xl shadow-highLight border-[1px] border-white
+			border-opacity-[15%] xs:h-72 bg-[#1b1c1e] hover:shadow-glow
+			hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out
+			transition duration-150 flex items-center justify-center text-opacity-75 xs:text-[40px] ss:text-[75px] sm:text-[40px] md:text-[60px] lg:text-[75px] text-center`}
 							onClick={() => handleButtonClick("Article Summarizer")}
 						>
 							Article Summarizer
@@ -90,18 +99,18 @@ function Projects() {
 					{currentProject === "Kanban" ? (
 						<motion.li
 							variants={child}
-							className="sm:col-span-2 md:col-span-2 md:row-span-2"
+							className="col-span-2 row-span-1 sm:col-span-2 md:col-span-2 md:row-span-2"
 						>
 							<div
 								className="  rounded-2xl
             shadow-highLight border-[1px] border-white border-opacity-[15%]
-            md:h-[576px] xs:h-fit bg-[#1b1c1e] flex flex-col items-center justify-start p-10 gap-7"
+            lg:h-[576px] h-fit bg-[#1b1c1e] flex flex-col items-center justify-between p-10 gap-7"
 							>
-								<h1 className="flex w-full justify-start text-6xl font-semibold text-[#FFF5EE]">
+								<h1 className="flex w-full justify-start  ss:text-6xl sm:text-[40px] md:text-6xl font-semibold text-[#FFF5EE]">
 									Description
 								</h1>
 								<div className="flex flex-col gap-3">
-									<p className="text-xl text-[#70798C]">
+									<p className="text-xl text-[#70798C] ">
 										A simple Kanban board implementation. The board is divided
 										into columns that represent the stages of the workflow, such
 										as "To Do," "In Progress," and "Completed."
@@ -113,7 +122,7 @@ function Projects() {
 									</p>
 								</div>
 								<div className="flex w-full flex-col justify-start">
-									<ul className="flex flex-row gap-5 text-[#70798C]">
+									<ul className="flex flex-row gap-5 text-[#70798C] flex-wrap">
 										<li>Javascript</li>
 										<li>HTML</li>
 										<li>CSS</li>
@@ -121,11 +130,12 @@ function Projects() {
 										<li>Tailwind</li>
 									</ul>
 								</div>
-								<button className="bg-orange-600 p-2 px-4 rounded-full">
+								<button>
 									<a
 										href="https://github.com/Csluu/Kanban"
 										target="_blank"
 										rel="noopener noreferrer"
+										className="bg-orange-600 p-2 px-4 rounded-full"
 									>
 										Github
 									</a>
@@ -135,42 +145,44 @@ function Projects() {
 					) : currentProject === "DevSearch" ? (
 						<motion.li
 							variants={child}
-							className="sm:col-span-2 md:col-span-2 md:row-span-2"
+							className="col-span-2 row-span-1 sm:col-span-2 md:col-span-2 md:row-span-2"
 						>
 							<div
 								className="  rounded-2xl
             shadow-highLight border-[1px] border-white border-opacity-[15%]
-            md:h-[576px] xs:h-fit bg-[#1b1c1e] flex flex-col items-center justify-start p-10 gap-7"
+            lg:h-[576px] h-fit  bg-[#1b1c1e] flex flex-col items-center justify-between p-10 gap-7"
 							>
-								<h1 className="flex w-full justify-start text-6xl font-semibold text-[#FFF5EE]">
+								<h1 className="flex w-full justify-start  ss:text-6xl sm:text-[40px] md:text-6xl font-semibold text-[#FFF5EE]">
 									Description
 								</h1>
 								<div className="flex flex-col gap-3">
 									<p className="text-xl text-[#70798C]">
-										A simple DevSearch board implementation. The board is
-										divided into columns that represent the stages of the
-										workflow, such as "To Do," "In Progress," and "Completed."
+										DevSearch is a social media platform specifically designed
+										for software developers. It functions like a LinkedIn for
+										developers where users can create profiles to showcase their
+										skills, experience, and projects.
 									</p>
 									<p className="text-xl text-[#70798C]">
-										Tasks are represented as cards that can be moved between
-										columns by dragging and dropping, allowing people to track
-										their progress more effectively.
+										Developers can connect with one another, collaborate on
+										projects, and discover job opportunities.
 									</p>
 								</div>
-								<div className="flex w-full flex-col justify-start">
-									<ul className="flex flex-row gap-5 text-[#70798C]">
+
+								<div className="flex flex-col justify-center place-items-center">
+									<ul className="flex flex-row gap-5 text-[#70798C] flex-wrap">
 										<li>Javascript</li>
 										<li>HTML</li>
 										<li>CSS</li>
-										<li>Electron</li>
-										<li>Tailwind</li>
+										<li>Django</li>
+										<li>PostgresSQL</li>
 									</ul>
 								</div>
-								<button className="bg-orange-600 p-2 px-4 rounded-full">
+								<button>
 									<a
-										href="https://github.com/Csluu/Kanban"
+										href="https://github.com/Csluu/DevSearch"
 										target="_blank"
 										rel="noopener noreferrer"
+										className="bg-orange-600 p-2 px-4 rounded-full"
 									>
 										Github
 									</a>
@@ -180,59 +192,75 @@ function Projects() {
 					) : (
 						<motion.li
 							variants={child}
-							className="sm:col-span-2 md:col-span-2 md:row-span-2"
+							className="col-span-2 row-span-1 sm:col-span-2 md:col-span-2 md:row-span-2"
 						>
 							<div
 								className="  rounded-2xl
             shadow-highLight border-[1px] border-white border-opacity-[15%]
-            md:h-[576px] xs:h-fit bg-[#1b1c1e] flex flex-col items-center justify-start p-10 gap-7"
+            lg:h-[576px] h-fit  bg-[#1b1c1e] flex flex-col items-center justify-between p-10 gap-7"
 							>
-								<h1 className="flex w-full justify-start text-6xl font-semibold text-[#FFF5EE]">
+								<h1 className="flex w-full justify-start  ss:text-6xl sm:text-[40px] md:text-6xl font-semibold text-[#FFF5EE]">
 									Description
 								</h1>
 								<div className="flex flex-col gap-3">
 									<p className="text-xl text-[#70798C]">
-										A simple Article Summarizer board implementation. The board
-										is divided into columns that represent the stages of the
-										workflow, such as "To Do," "In Progress," and "Completed."
+										An article summarizer that utilizes the power of chatGPT to
+										generate accurate and concise summaries of articles. The
+										tool is designed to help users quickly comprehend the main
+										ideas of an article without having to read through the
+										entire text.
 									</p>
 									<p className="text-xl text-[#70798C]">
-										Tasks are represented as cards that can be moved between
-										columns by dragging and dropping, allowing people to track
-										their progress more effectively.
+										Users can simply input the URL of an article and the tool
+										will automatically generate a summary.
 									</p>
 								</div>
-								<div className="flex w-full flex-col justify-start">
-									<ul className="flex flex-row gap-5 text-[#70798C]">
+
+								<div className="flex flex-col justify-center place-items-center">
+									<ul className="flex flex-row gap-5 text-[#70798C] flex-wrap">
 										<li>Javascript</li>
 										<li>HTML</li>
 										<li>CSS</li>
-										<li>Electron</li>
+										<li>React</li>
 										<li>Tailwind</li>
 									</ul>
 								</div>
-								<button className="bg-orange-600 p-2 px-4 rounded-full">
-									<a
-										href="https://github.com/Csluu/Kanban"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										Github
-									</a>
-								</button>
+
+								<div className="flex gap-5">
+									<button>
+										<a
+											href="https://github.com/Csluu/ArtiSummarizer"
+											target="_blank"
+											rel="noopener noreferrer"
+											className="bg-orange-600 p-2 px-4 rounded-full"
+										>
+											Github
+										</a>
+									</button>
+									<button>
+										<a
+											href="https://arti-summarizer.vercel.app/"
+											target="_blank"
+											rel="noopener noreferrer"
+											className="bg-orange-600 p-2 px-4 rounded-full"
+										>
+											Website
+										</a>
+									</button>
+								</div>
 							</div>
 						</motion.li>
 					)}
 					{/* picture */}
 					<motion.li
 						variants={child}
-						className="sm:col-span-2 md:col-span-4 md:row-span-2"
+						className="col-span-1 sm:col-span-4 md:col-span-4 md:row-span-2"
 					>
 						{currentProject === "Kanban" ? (
 							<div
 								className="  rounded-2xl
             shadow-highLight border-[1px] border-white border-opacity-[15%]
-            md:h-[576px] xs:h-fit bg-[#1b1c1e] flex items-center justify-center p-10"
+            lg:h-[576px] h-[665px] bg-[#1b1c1e] flex items-center justify-center p-10"
 							>
 								<img
 									src="./assets/kanban.png"
@@ -244,10 +272,10 @@ function Projects() {
 							<div
 								className="  rounded-2xl
             shadow-highLight border-[1px] border-white border-opacity-[15%]
-            md:h-[576px] xs:h-fit bg-[#1b1c1e] flex items-center justify-center p-10"
+            lg:h-[576px] h-[665px] bg-[#1b1c1e] flex items-center justify-center p-10"
 							>
 								<img
-									src="./assets/kanban.png"
+									src="./assets/DevSearch.png"
 									alt="LinkedIn Profile"
 									className="scale-[100%] rounded-xl"
 								/>
@@ -256,89 +284,16 @@ function Projects() {
 							<div
 								className="  rounded-2xl
 		shadow-highLight border-[1px] border-white border-opacity-[15%]
-		md:h-[576px] xs:h-fit bg-[#1b1c1e] flex items-center justify-center p-10"
+		lg:h-[576px] h-[695px] bg-[#1b1c1e] flex items-center justify-center p-10"
 							>
 								<img
-									src="./assets/kanban.png"
+									src="./assets/summary.png"
 									alt="LinkedIn Profile"
 									className="scale-[100%] rounded-xl"
 								/>
 							</div>
 						)}
 					</motion.li>
-					{/* <motion.li
-						variants={child}
-						className="sm:col-span-2 md:col-span-2 md:row-span-2"
-					>
-						<div
-							className="  rounded-2xl
-            shadow-highLight border-[1px] border-white border-opacity-[15%]
-            md:h-[576px] xs:h-fit bg-[#1b1c1e] flex flex-col items-center justify-start p-10 gap-5"
-						>
-							<h1 className="flex w-full justify-start text-6xl font-semibold text-[#FFF5EE]">
-								Description
-							</h1>
-							<div className="flex flex-col gap-3">
-								<p className="text-xl text-[#70798C]">
-									DevSearch is a social media platform specifically designed for
-									software developers. It functions like a LinkedIn for
-									developers where users can create profiles to showcase their
-									skills, experience, and projects.
-								</p>
-								<p className="text-xl text-[#70798C]">
-									Developers can connect with one another, collaborate on
-									projects, and discover job opportunities.
-								</p>
-							</div>
-
-							<div className="flex flex-col justify-center place-items-center">
-								<ul className="flex flex-row gap-5 text-[#70798C]">
-									<li>Javascript</li>
-									<li>HTML</li>
-									<li>CSS</li>
-									<li>Django</li>
-									<li>PostgresSQL</li>
-								</ul>
-							</div>
-							<div className="flex gap-5">
-								<button className="bg-orange-600 p-2 px-4 rounded-full">
-									<a
-										href="https://github.com/Csluu/DevSearch"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										Github
-									</a>
-								</button>
-								<button className="bg-orange-600 p-2 px-4 rounded-full">
-									<a
-										href="https://github.com/Csluu/DevSearch"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										Website
-									</a>
-								</button>
-							</div>
-						</div>
-					</motion.li>
-
-					<motion.li
-						variants={child}
-						className="sm:col-span-2 md:col-span-4 md:row-span-2"
-					>
-						<div
-							className="  rounded-2xl
-            shadow-highLight border-[1px] border-white border-opacity-[15%]
-            md:h-[576px] xs:h-fit bg-[#1b1c1e] flex items-center justify-center p-10"
-						>
-							<img
-								src="./assets/kanban.png"
-								alt="LinkedIn Profile"
-								className="scale-[100%] rounded-xl"
-							/>
-						</div>
-					</motion.li> */}
 				</ul>
 			</div>
 		</motion.section>
