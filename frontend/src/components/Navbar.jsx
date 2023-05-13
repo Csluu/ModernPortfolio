@@ -64,7 +64,7 @@ const LinkName = ({ setSelectedPage }) => {
 const Navbar = ({ selectedPage, setSelectedPage }) => {
 	const [isMenuToggled, setIsMenuToggled] = useState(false);
 	const isDesktop = useMediaQuery("(min-width: 768px)");
-	const isResumePage = window.location.href === "http://localhost:3000/Resume";
+	const isResumePage = window.location.href === "https://www.csluu.com/Resume";
 
 	return (
 		<nav className="flex fixed top-0 items-center justify-center w-full font-quicksand z-30">

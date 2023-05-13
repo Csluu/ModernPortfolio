@@ -90,39 +90,100 @@ function Resume() {
 							</header>
 							<ul className="flex flex-col gap-5">
 								<li>
-									<h1 className="text-[#FFF5EE] text-[25px]">
-										Asset Documentation Tool
-									</h1>
-									<p>
-										Incorporated features such as task assignment, progress
-										tracking, and real-time notifications, inventory management,
-										reporting, and user authentication Utilized React, Django,
-										and MongoDB to create a scalable and user-friendly interface
-									</p>
+									<h1 className="text-[#FFF5EE] text-[25px]">Kanban</h1>
+									<ul className="flex flex-col list-disc w-full pl-5 gap-2">
+										<li>
+											Developed a user-friendly Kanban board application using
+											JavaScript, HTML, CSS, and the Electron framework. This
+											cross-platform application enhanced task management
+											efficiency and improved user productivity.
+										</li>
+										<li>
+											Utilized Electron to package the application for Windows,
+											Mac, and Linux operating systems, broadening its
+											accessibility and usability across various platforms.
+										</li>
+										<li>
+											Utilized the React-DnD library for seamless drag-and-drop
+											functionality. This allowed users to intuitively move task
+											cards between different stages of the workflow.
+										</li>
+										<li>
+											Leveraged local storage to persist data, ensuring that
+											users' tasks and their states are saved between sessions,
+											enabling seamless resumption of work across different
+											sessions.
+										</li>
+										<li>
+											Incorporated Tailwind CSS for efficient and responsive
+											styling, delivering an intuitive and enjoyable user
+											experience.
+										</li>
+									</ul>
 								</li>
 								<li>
 									<h1 className="text-[#FFF5EE] text-[25px]">
-										Study Chat Room
+										Social Media Platform for Developers
 									</h1>
-									<p>
-										Built a web-based chat room application designed for
-										students to discuss and collaborate on classwork Implemented
-										real-time messaging and file sharing capabilities using
-										WebSockets and JavaScript Utilized MongoDB to store user
-										data and chat history
-									</p>
+									<ul className="flex flex-col list-disc w-full pl-5 gap-2">
+										<li>
+											Designed and developed a dynamic social networking
+											platform specifically tailored for software developers,
+											akin to LinkedIn, providing a dedicated space to meet
+											their unique needs and interests.
+										</li>
+										<li>
+											Utilized a robust tech stack including JavaScript, HTML,
+											CSS, Django, and PostgreSQL to create a powerful,
+											scalable, and secure platform.
+										</li>
+										<li>
+											Empowered developers to create comprehensive profiles
+											showcasing their skills, experience, and projects,
+											facilitating a centralized hub for developers to highlight
+											their expertise and build their professional brand.
+										</li>
+										<li>
+											Leveraged Django for robust backend development and
+											PostgreSQL for efficient data management, ensuring optimal
+											performance and a reliable user experience.
+										</li>
+									</ul>
 								</li>
 								<li>
 									<h1 className="text-[#FFF5EE] text-[25px]">
-										eCommerce Store
+										Article Summarizer
 									</h1>
-									<p>
-										Developed an eCommerce platform that allows users to browse
-										and purchase products online Incorporated features such as
-										shopping cart, customer account management, and secure
-										checkout using Stripe Utilized React, Django, and MySQL to
-										create a responsive and user-friendly interface
-									</p>
+									<ul className="flex flex-col list-disc w-full pl-5 gap-2">
+										<li>
+											Developed an efficient Article Summarizer tool that
+											leverages the advanced capabilities of ChatGPT to generate
+											concise and accurate summaries, enhancing user
+											comprehension of complex articles.
+										</li>
+										<li>
+											Integrated local storage functionality to enhance
+											usability, allowing users to conveniently access and
+											manage their past article summaries for easy reference.
+										</li>
+										<li>
+											Utilized JavaScript and Redux for efficient state
+											management, ensuring a smooth and responsive user
+											experience throughout the application.
+										</li>
+										<li>
+											Leveraged React for building an interactive and intuitive
+											user interface, and employed Tailwind CSS for rapid UI
+											development, delivering a visually appealing and
+											user-friendly interface.
+										</li>
+										<li>
+											Deployed the application using Vercel for seamless
+											deployment and hosting, benefiting from its serverless
+											architecture, automatic Git integration, and global CDN
+											for optimal performance and scalability.
+										</li>
+									</ul>
 								</li>
 							</ul>
 						</motion.li>
@@ -135,15 +196,17 @@ function Resume() {
 							</header>
 
 							<h1 className="text-[#FFF5EE] text-[25px]">Ricoh</h1>
-							<h2>Desktop Support Engineer Contractor</h2>
-							<ul className="list-disc w-full pl-5">
+							<h2 className="text-[#FFF5EE]">
+								Desktop Support Engineer Contractor
+							</h2>
+							<ul className="flex flex-col list-disc w-full pl-5 gap-2">
 								<li>
 									Successfully deployed over 300 laptops and phones for refresh
 									project for end-users
 								</li>
 								<li>
 									Refederated LassPass accounts for over 1000 employees over
-									three months, ensuring the security of sensitive data and
+									four months, ensuring the security of sensitive data and
 									accounts
 								</li>
 								<li>
@@ -169,8 +232,8 @@ function Resume() {
 								</li>
 							</ul>
 							<h1 className="text-[#FFF5EE] text-[25px]">Little Arm Studios</h1>
-							<h2>3D Technical Artist Intern</h2>
-							<ul className="list-disc w-full pl-5">
+							<h2 className="text-[#FFF5EE]">3D Technical Artist Intern</h2>
+							<ul className="flex flex-col list-disc w-full pl-5 gap-2">
 								<li>
 									Used source control software such as GitKraken to manage and
 									track changes to 3D assets and code
@@ -204,8 +267,8 @@ function Resume() {
 							<h1 className="text-[#FFF5EE] text-[25px]">
 								George Mason University
 							</h1>
-							<h2>B.F.A Computer Game Design</h2>
-							<p>Summa Cum Laude; 3.91 GPA</p>
+							<h2 className="text-[#FFF5EE]">B.F.A Computer Game Design</h2>
+							<p>Summa Cum Laude: 3.91 GPA</p>
 						</motion.li>
 						<motion.li
 							variants={child}
@@ -224,7 +287,7 @@ function Resume() {
 									<h1 className="text-[#FFF5EE] text-[25px]">
 										Task Management
 									</h1>
-									<p>Jira, ServiceNow, TeamDynamix, Github</p>
+									<p>Jira, ServiceNow, TeamDynamix</p>
 								</li>
 								<li>
 									<h1 className="text-[#FFF5EE] text-[25px]">Languages</h1>
@@ -234,14 +297,16 @@ function Resume() {
 									<h1 className="text-[#FFF5EE] text-[25px]">
 										Framework and Libraries
 									</h1>
-									<p>ReactJS, Django, Tailwind, Electron, Redux, REST</p>
+									<p>
+										ReactJS, ViteJS, Django, Tailwind, Electron, Redux, REST
+									</p>
 								</li>
 								<li>
 									<h1 className="text-[#FFF5EE] text-[25px]">
 										Tools and Software
 									</h1>
 									<p>
-										Postman, Gitkraken, Microsoft Teams, Unreal, Unity, Visual
+										Github, Gitkraken, Microsoft Teams, Unreal, Unity, Visual
 										Studio Code
 									</p>
 								</li>

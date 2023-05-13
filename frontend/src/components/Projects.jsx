@@ -174,7 +174,7 @@ function Projects() {
 										<li>HTML</li>
 										<li>CSS</li>
 										<li>Django</li>
-										<li>PostgresSQL</li>
+										<li>PostgreSQL</li>
 									</ul>
 								</div>
 								<button>
