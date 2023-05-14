@@ -1,5 +1,5 @@
 # Portfolio
-This is a showcase of my portfolio, highlighting my skills, experiences, and projects. It serves as a comprehensive representation of my work as a developer/designer and provides insights into my abilities, achievements, and interests. The primary objective of this portfolio is to create a visually appealing and informative platform that showcases my skills, projects, and professional experiences. By presenting my work in an accessible and engaging manner, I aim to attract potential clients, collaborators, and employers.
+This is a showcase of my [portfolio](https://www.csluu.com/), highlighting my skills, experiences, and projects. It serves as a comprehensive representation of my work as a developer/designer and provides insights into my abilities, achievements, and interests. The primary objective of this portfolio is to create a visually appealing and informative platform that showcases my skills, projects, and professional experiences. By presenting my work in an accessible and engaging manner, I aim to attract potential clients, collaborators, and employers.
 
 ## Features
 - About Me: Learn more about me, including my background, education, work experience, and professional achievements.
