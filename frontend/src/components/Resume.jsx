@@ -90,98 +90,55 @@ function Resume() {
 							</header>
 							<ul className="flex flex-col gap-5">
 								<li>
-									<h1 className="text-[#FFF5EE] text-[25px]">Kanban</h1>
+									<h1 className="text-[#FFF5EE] text-[25px]">
+										Social Media Website
+									</h1>
 									<ul className="flex flex-col list-disc w-full pl-5 gap-2">
 										<li>
-											Developed a user-friendly Kanban board application using
-											JavaScript, HTML, CSS, and the Electron framework. This
-											cross-platform application enhanced task management
-											efficiency and improved user productivity.
+											Engineered a Reddit-like platform with NextAuth for secure
+											Google logins, full CRUD operations, and community
+											features like voting, commenting, and categorization.
 										</li>
 										<li>
-											Utilized Electron to package the application for Windows,
-											Mac, and Linux operating systems, broadening its
-											accessibility and usability across various platforms.
+											Optimized MySQL with Prisma and Redis caching, enhancing
+											data access and reducing response times by 40%.
 										</li>
 										<li>
-											Utilized the React-DnD library for seamless drag-and-drop
-											functionality. This allowed users to intuitively move task
-											cards between different stages of the workflow.
+											Utilized Vercel for deployment, enabling seamless updates,
+											and optimized server-side rendering, increasing load times
+											by 30%.
 										</li>
 										<li>
-											Leveraged local storage to persist data, ensuring that
-											users' tasks and their states are saved between sessions,
-											enabling seamless resumption of work across different
-											sessions.
+											Leveraged NextJS features, including image optimization,
+											lazy loading, and .webp conversion, for a 50% performance
+											improvement.
 										</li>
 										<li>
-											Incorporated Tailwind CSS for efficient and responsive
-											styling, delivering an intuitive and enjoyable user
-											experience.
+											Implemented a modern UI using Tailwind CSS, reducing CSS
+											code by 65%, and React's component-based structure,
+											boosting code reusability by 60%.
 										</li>
 									</ul>
 								</li>
 								<li>
 									<h1 className="text-[#FFF5EE] text-[25px]">
-										Social Media Platform for Developers
+										Crowdfunding Platform
 									</h1>
 									<ul className="flex flex-col list-disc w-full pl-5 gap-2">
 										<li>
-											Designed and developed a dynamic social networking
-											platform specifically tailored for software developers,
-											akin to LinkedIn, providing a dedicated space to meet
-											their unique needs and interests.
+											Developed a secure, Ethereum-based crowdfunding platform
+											using Solidity, featuring real-time transaction tracking
+											to enhance transparency for backers and creators
 										</li>
 										<li>
-											Utilized a robust tech stack including JavaScript, HTML,
-											CSS, Django, and PostgreSQL to create a powerful,
-											scalable, and secure platform.
+											Enabled users to create, view, fund, and search for
+											campaigns, offering a comprehensive and interactive
+											crowdfunding experience.
 										</li>
 										<li>
-											Empowered developers to create comprehensive profiles
-											showcasing their skills, experience, and projects,
-											facilitating a centralized hub for developers to highlight
-											their expertise and build their professional brand.
-										</li>
-										<li>
-											Leveraged Django for robust backend development and
-											PostgreSQL for efficient data management, ensuring optimal
-											performance and a reliable user experience.
-										</li>
-									</ul>
-								</li>
-								<li>
-									<h1 className="text-[#FFF5EE] text-[25px]">
-										Article Summarizer
-									</h1>
-									<ul className="flex flex-col list-disc w-full pl-5 gap-2">
-										<li>
-											Developed an efficient Article Summarizer tool that
-											leverages the advanced capabilities of ChatGPT to generate
-											concise and accurate summaries, enhancing user
-											comprehension of complex articles.
-										</li>
-										<li>
-											Integrated local storage functionality to enhance
-											usability, allowing users to conveniently access and
-											manage their past article summaries for easy reference.
-										</li>
-										<li>
-											Utilized JavaScript and Redux for efficient state
-											management, ensuring a smooth and responsive user
-											experience throughout the application.
-										</li>
-										<li>
-											Leveraged React for building an interactive and intuitive
-											user interface, and employed Tailwind CSS for rapid UI
-											development, delivering a visually appealing and
-											user-friendly interface.
-										</li>
-										<li>
-											Deployed the application using Vercel for seamless
-											deployment and hosting, benefiting from its serverless
-											architecture, automatic Git integration, and global CDN
-											for optimal performance and scalability.
+											Utilized a robust tech stack including Hardhat, Thirdweb,
+											React, and Tailwind CSS to develop and deploy the
+											application, ensuring scalability and maintainability.
 										</li>
 									</ul>
 								</li>
@@ -201,15 +158,6 @@ function Resume() {
 							</h2>
 							<ul className="flex flex-col list-disc w-full pl-5 gap-2">
 								<li>
-									Successfully deployed over 300 laptops and phones for refresh
-									project for end-users
-								</li>
-								<li>
-									Refederated LassPass accounts for over 1000 employees over
-									four months, ensuring the security of sensitive data and
-									accounts
-								</li>
-								<li>
 									Troubleshooted and resolved a wide range of technical issues,
 									from software and hardware problems to network and
 									connectivity issues
@@ -217,43 +165,23 @@ function Resume() {
 								<li>
 									Maintained a high customer satisfaction rating of 99%, as
 									reported through user feedback, by resolving an average of
-									five tickets per day
+									eight tickets per day
 								</li>
 								<li>
-									Developed and implemented scripts to automate the software
-									download process, reducing the time and effort required to
-									install software on laptops.
+									Developed and implemented powershell and bash scripts to
+									automate the software download process, reducing the time and
+									effort required to install software on laptops.
+								</li>
+								<li>
+									Developed an automated ticket queue management tool using
+									Puppeteer, significantly reducing manual sorting time and
+									enhancing workflow efficiency.
 								</li>
 								<li>
 									Utilized ServiceNow as the primary ticketing system, managing
 									and prioritizing tickets, communicating effectively with
 									end-users, and maintaining accurate records of all
 									interactions and resolutions
-								</li>
-							</ul>
-							<h1 className="text-[#FFF5EE] text-[25px]">Little Arm Studios</h1>
-							<h2 className="text-[#FFF5EE]">3D Technical Artist Intern</h2>
-							<ul className="flex flex-col list-disc w-full pl-5 gap-2">
-								<li>
-									Used source control software such as GitKraken to manage and
-									track changes to 3D assets and code
-								</li>
-								<li>
-									Reduced memory and storage up to 40% for image textures by
-									utilizing channel packing and trim sheets
-								</li>
-								<li>
-									Utilized Jira for task management, including creating,
-									updating, and tracking tickets for assigned tasks and bugs
-								</li>
-								<li>
-									Created and textured 3D models of infrastructure, weaponry,
-									and vehicles using Blender and Substance Painter
-								</li>
-								<li>
-									Actively participated in daily scrum meetings to update the
-									team on progress, identify any issues, and collaborate with my
-									colleagues towards achieving our project goals.
 								</li>
 							</ul>
 						</motion.li>
@@ -280,7 +208,7 @@ function Resume() {
 							<ul>
 								<li>
 									<h1 className="text-[#FFF5EE] text-[25px]">Databases</h1>
-									<p>PostgreSQL</p>
+									<p>PostgreSQL, MongoDB, MySQL, Redis</p>
 								</li>
 
 								<li>
@@ -291,14 +219,15 @@ function Resume() {
 								</li>
 								<li>
 									<h1 className="text-[#FFF5EE] text-[25px]">Languages</h1>
-									<p>Python, Javascript, CSS, HTML, C#, Java</p>
+									<p>Python, JavaScript, TypeScript, CSS, HTML, Solidity</p>
 								</li>
 								<li>
 									<h1 className="text-[#FFF5EE] text-[25px]">
 										Framework and Libraries
 									</h1>
 									<p>
-										ReactJS, ViteJS, Django, Tailwind, Electron, Redux, REST
+										ReactJS, AuthJS, Tailwind CSS, Electron, REST, NextJS,
+										Prisma, Puppeteer, Cypress, Jest
 									</p>
 								</li>
 								<li>
@@ -306,8 +235,8 @@ function Resume() {
 										Tools and Software
 									</h1>
 									<p>
-										Github, Gitkraken, Microsoft Teams, Unreal, Unity, Visual
-										Studio Code
+										Vercel, Github, GitKraken, Microsoft Teams, Docker, Unreal,
+										Unity, Docker
 									</p>
 								</li>
 							</ul>

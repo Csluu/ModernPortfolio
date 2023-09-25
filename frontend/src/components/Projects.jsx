@@ -89,10 +89,10 @@ function Projects() {
 			rounded-2xl shadow-highLight border-[1px] border-white
 			border-opacity-[15%] xs:h-72 bg-[#1b1c1e] hover:shadow-glow
 			hover:shadow-orange-500 hover:scale-[101%] hover:ease-in-out
-			transition duration-150 flex items-center justify-center text-opacity-75 xs:text-[40px] ss:text-[75px] sm:text-[40px] md:text-[60px] lg:text-[75px] text-center`}
+			transition duration-150 flex items-center justify-center text-opacity-75 xs:text-[40px] ss:text-[75px] sm:text-[40px] md:text-[50px] lg:text-[60px] text-center`}
 							onClick={() => handleButtonClick("Article Summarizer")}
 						>
-							Article Summarizer
+							Blockchain Crowdfunding
 						</div>
 					</motion.li>
 					{/* Description */}
@@ -204,15 +204,10 @@ function Projects() {
 								</h1>
 								<div className="flex flex-col gap-3">
 									<p className="text-xl text-[#70798C]">
-										An article summarizer that utilizes the power of chatGPT to
-										generate accurate and concise summaries of articles. The
-										tool is designed to help users quickly comprehend the main
-										ideas of an article without having to read through the
-										entire text.
-									</p>
-									<p className="text-xl text-[#70798C]">
-										Users can simply input the URL of an article and the tool
-										will automatically generate a summary.
+										A blockchain-powered crowdfunding platform that seamlessly
+										connects creators with backers. With decentralized
+										transparency, it simplifies fundraising, giving users
+										confidence in supporting and tracking innovative projects.
 									</p>
 								</div>
 
@@ -223,28 +218,20 @@ function Projects() {
 										<li>CSS</li>
 										<li>React</li>
 										<li>Tailwind</li>
+										<li>Solidity</li>
+										<li>Thirdweb</li>
 									</ul>
 								</div>
 
 								<div className="flex gap-5">
 									<button>
 										<a
-											href="https://github.com/Csluu/ArtiSummarizer"
+											href="https://github.com/Csluu/crowdFunding"
 											target="_blank"
 											rel="noopener noreferrer"
 											className="bg-orange-600 p-2 px-4 rounded-full"
 										>
 											Github
-										</a>
-									</button>
-									<button>
-										<a
-											href="https://arti-summarizer.vercel.app/"
-											target="_blank"
-											rel="noopener noreferrer"
-											className="bg-orange-600 p-2 px-4 rounded-full"
-										>
-											Website
 										</a>
 									</button>
 								</div>
@@ -287,9 +274,9 @@ function Projects() {
 		lg:h-[576px] h-[695px] bg-[#1b1c1e] flex items-center justify-center p-10"
 							>
 								<img
-									src="./assets/summary.png"
+									src="./assets/crowdfunding.png"
 									alt="LinkedIn Profile"
-									className="scale-[100%] rounded-xl"
+									className="scale-[80%] rounded-xl"
 								/>
 							</div>
 						)}

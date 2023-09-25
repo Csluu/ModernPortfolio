@@ -46,7 +46,7 @@ function AboutMe(selectedPage, setSelectedPage) {
 					</motion.li>
 					<motion.li
 						variants={child}
-						className="bg-orange-bg sm:col-span-1 md:col-span-2 lg:col-span-3 rounded-xl shadow-highLight border-[1px] border-white border-opacity-[15%] h-72 flex justify-center p-5 gap-5"
+						className="bg-orange-bg sm:col-span-1 md:col-span-2 lg:col-span-3 rounded-xl shadow-highLight border-[1px] border-white border-opacity-[15%] h-72 flex justify-center p-5 gap-5 shadow-md"
 					>
 						<div className="flex flex-col font-semibold xs:justify-evenly justify-center bg-am">
 							<p className="text-[35px] ss:text-[80px] sm:text-[55px] md:text-[80px] lg:text-[120px] text-[#1b1c1e] font-quicksand">
